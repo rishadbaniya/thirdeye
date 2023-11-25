@@ -1,0 +1,3 @@
+[workspace]
+members = ["third-eye-client", "third-eye-server"]
+resolver = "2"
