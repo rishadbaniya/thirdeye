@@ -15,6 +15,8 @@ pub struct ThirdEyeServerConfig {
 
     #[serde(rename="grpc_server")]
     pub grpc_server_config: gRPCServerConfig,
+
+
 }
 
 
@@ -28,6 +30,7 @@ pub struct MongoDBConfig {
     pub password: String,
 
     pub database: String,
+
 }
 
 impl ThirdEyeServerConfig{
@@ -63,13 +66,48 @@ impl ThirdEyeServerConfig{
             })
         };
 
+        third_eye_server_config.http_server_config.access_token_key = {
+            let key = env_var!(ACCESS_TOKEN_KEY);
+            Some(key)
+        };
+
+        third_eye_server_config.http_server_config.refresh_token_key = {
+            let key = env_var!(REFRESH_TOKEN_KEY);
+            Some(key)
+        };
         Ok(third_eye_server_config)
     }
 }
 
 #[derive(Debug, Deserialize, Clone)]
 pub struct HttpServerConfig{
-    pub address : String
+    pub address : String,
+
+    /// Email of users that can't be deleted
+    pub undeletable: Vec<String>,
+    
+    /// Default admin full name
+    pub default_admin_fullName: String,
+
+    /// Default admin email
+    pub default_admin_email: String,
+
+    /// Default admin password
+    pub default_admin_password: String,
+
+    /// Access Token expirty time in minutes
+    pub access_token_expiry_time: i64,
+
+    /// Refresh Token expirty time in minutes
+    pub refresh_token_expiry_time: i64,
+
+    /// The key used to decode and encode access token
+    #[serde(skip_deserializing)]
+    pub access_token_key: Option<String>,
+
+    /// The key used to decode and encode access token
+    #[serde(skip_deserializing)]
+    pub refresh_token_key: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Clone)]

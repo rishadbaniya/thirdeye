@@ -19,3 +19,19 @@ impl MongoDBClient {
         Ok(Self { client, database })
     }
 }
+
+
+pub struct RedisClient {
+    pub client: redis::Client,
+}
+
+impl RedisClient {
+    pub async fn new() -> anyhow::Result<Self> {
+        // TODO: Similar to mongodb yo format use garnu parne
+        //let url = format!("redis://{}:{}@{}", config.username, config.password, config.url);
+        let client = redis::Client::open("redis://localhost:6379/")?;
+
+        Ok(RedisClient { client })
+    }
+}
+

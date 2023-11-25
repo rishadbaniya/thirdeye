@@ -1,5 +1,21 @@
 [http_server]
 address = "0.0.0.0:8000"
 
+# Users(it could be admin or any user) that can't be deleted, we will usually do with one user so that
+# it can't be deleted and can't be updated from this email to other
+undeletable = ["rbdroid01@gmail.com"]
+
+# The email and password of the default admin i.e admin we start out with(the password can be changed later on)
+# if "default_admin_email" doesn't exist
+default_admin_email = "rbdroid01@gmail.com"
+default_admin_password = "rishadbaniya"
+default_admin_fullName = "Rishad Baniya"
+
+# Access token expiry time, in minutes
+access_token_expiry_time = 60
+
+# Refresh token expiry time, in minutes
+refresh_token_expiry_time =  3600
+
 [grpc_server]
 address = "0.0.0.0:8001"
