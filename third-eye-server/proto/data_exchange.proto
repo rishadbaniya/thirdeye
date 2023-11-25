@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package data_exchange;
+
+service DataExchangeService{
+    /// Send System Information to the server and get the configuration for SysInfo
+    rpc sendSysInfo(stream SysInfo) returns (stream SysInfoConfig);
+    
+    /// Waits for a command from the server and sends the response
+    rpc getCommand(stream CommandResponse) returns (stream CommandRequest);
+
+}
+
+enum Command{
+    SHUTDOWN = 0;
+    RESTART = 1;
+}
+
+message CommandRequest{
+    Command command = 1;
+}
+
+message CommandResponse{
+    string response = 1;
+}
+
+/// The current System Information
+message SysInfo{
+    /// The number of CPU cores
+    uint32 cpu_cores = 1;
+
+    /// The CPU frequency
+    uint32 cpu_frequency = 2;
+
+    /// The CPU frequency
+    string cpu_brand = 3;
+
+    /// The total memory size
+    uint32 memory_size = 4;
+
+    /// The total memory available
+    uint32 memory_available = 5;
+    
+    /// The total memory used
+    uint32 memory_used = 6;
+
+    /// The system uptime
+    uint32 uptime = 7;
+    
+    /// The unique name of the device in the group
+    string device_name = 8;
+
+    /// The unique name of the group
+    string group_name = 9;
+}
+
+/// Configures how SysInfo should be sent
+message SysInfoConfig{
+
+    /// The interval at which SysInfo should be sent(in seconds)
+    uint32 interval = 1;
+}
+

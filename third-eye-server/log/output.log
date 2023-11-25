@@ -1,0 +1,299 @@
+2023-11-25T08:12:38.147148067+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:12:38.148137877+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:12:38.148976933+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:12:38.149066374+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T08:13:01.381177116+05:45 [third_eye_server::http::routes::user] ERROR- Failed to connect with the database | $Error { kind: Authentication { message: "SCRAM failure: Authentication failed." }, labels: {}, wire_version: None, source: Some(Error { kind: Command(CommandError { code: 18, code_name: "AuthenticationFailed", message: "Authentication failed.", topology_version: None }), labels: {}, wire_version: None, source: None }) }
+2023-11-25T08:15:54.897352343+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:15:54.897822964+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:15:54.898571743+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:15:54.898634739+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T08:23:15.141133968+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:23:15.142564640+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:23:15.143301583+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:23:15.143373076+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T08:25:42.433226109+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2023-11-25T08:25:42.433401744+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2023-11-25T08:25:42.433585548+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.433766358+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.433822300+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434007326+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434067681+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434114772+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434163252+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434210097+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434252740+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434299329+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434341661+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434390836+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:25:42.434447883+05:45 [actix_server::accept] INFO- accept thread stopped
+2023-11-25T08:27:07.687961570+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:27:07.691517381+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:27:07.693936353+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:27:07.694165285+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T08:27:08.911702812+05:45 [third_eye_server::http::routes::user] INFO- The query string is 
+2023-11-25T08:27:08.911834987+05:45 [third_eye_server::http::routes::user] INFO- CAME HERE with Query(PaginationParams { perPage: None, page: None })
+2023-11-25T08:27:43.752791812+05:45 [third_eye_server::http::routes::user] INFO- The query string is haha=asfsafd
+2023-11-25T08:27:43.753071326+05:45 [third_eye_server::http::routes::user] INFO- CAME HERE with Query(PaginationParams { perPage: None, page: None })
+2023-11-25T08:27:55.616498547+05:45 [third_eye_server::http::routes::user] INFO- The query string is page=10
+2023-11-25T08:27:55.616632977+05:45 [third_eye_server::http::routes::user] INFO- CAME HERE with Query(PaginationParams { perPage: None, page: Some(10) })
+2023-11-25T08:28:09.713882985+05:45 [third_eye_server::http::routes::user] INFO- The query string is page=10&perPage=10
+2023-11-25T08:28:09.714132464+05:45 [third_eye_server::http::routes::user] INFO- CAME HERE with Query(PaginationParams { perPage: Some(10), page: Some(10) })
+2023-11-25T08:53:40.617919948+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:53:40.618962710+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:53:40.619668772+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:53:40.619721778+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T08:56:41.166169553+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2023-11-25T08:56:41.166398728+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.166583324+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.166675314+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.166736999+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.166849866+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2023-11-25T08:56:41.166913181+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.166971514+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167003324+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167044441+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167099090+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167175554+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167227454+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167276596+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T08:56:41.167326227+05:45 [actix_server::accept] INFO- accept thread stopped
+2023-11-25T08:56:54.810695697+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T08:56:54.811140942+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T08:56:54.811871167+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T08:56:54.811945960+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:06:03.565517030+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T09:06:03.565847327+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T09:06:03.566399820+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T09:06:03.566448479+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:06:08.348563110+05:45 [third_eye_server::http::routes::user] ERROR- Error while parsing to User type probably | Error { kind: BsonDeserialization(DeserializationError { message: "invalid type: map, expected a string" }), labels: {}, wire_version: None, source: None }
+2023-11-25T09:06:10.788163984+05:45 [third_eye_server::http::routes::user] ERROR- Error while parsing to User type probably | Error { kind: BsonDeserialization(DeserializationError { message: "invalid type: map, expected a string" }), labels: {}, wire_version: None, source: None }
+2023-11-25T09:11:04.179808304+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T09:11:04.180334859+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T09:11:04.181276495+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T09:11:04.181372023+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:32:19.445064190+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T09:32:19.445417074+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T09:32:19.445977289+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T09:32:19.446025084+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:35:06.748797083+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T09:35:06.749251736+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T09:35:06.750029441+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T09:35:06.750097252+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:37:08.716823188+05:45 [third_eye_server::http::routes::user] ERROR- Database Error | $Error { kind: InvalidArgument { message: "update document must have first key starting with '$" }, labels: {}, wire_version: None, source: None }
+2023-11-25T09:37:09.017773095+05:45 [third_eye_server::http::routes::user] ERROR- Database Error | $Error { kind: InvalidArgument { message: "update document must have first key starting with '$" }, labels: {}, wire_version: None, source: None }
+2023-11-25T09:49:42.913039241+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T09:49:42.914249888+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T09:49:42.914979014+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T09:49:42.915039350+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T09:51:12.992620125+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /user
+2023-11-25T09:51:53.841112871+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /user
+2023-11-25T10:21:45.174092452+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T10:21:45.180036015+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T10:21:45.197424884+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T10:21:45.198351246+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T10:21:58.712655879+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:22:26.136379666+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:22:38.324412092+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:22:45.344841087+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:22:54.424791667+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:23:00.479713943+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /group
+2023-11-25T10:31:37.856687895+05:45 [third_eye_server::http::routes::group] ERROR- Error while parsing to group type probably | Error { kind: BsonDeserialization(DeserializationError { message: "missing field `noOfDevices`" }), labels: {}, wire_version: None, source: None }
+2023-11-25T10:34:46.051795325+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T10:34:46.052928230+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T10:34:46.054433070+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T10:34:46.054632281+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
