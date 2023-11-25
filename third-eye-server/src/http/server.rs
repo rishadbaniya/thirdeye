@@ -1,13 +1,17 @@
-use super::routes::user::{create_user, get_user, get_users, update_user, delete_user};
 use super::routes::group::{create_group, get_group, get_groups};
-use actix_web::web::Data;
-use actix_web::{HttpServer, App};
-use actix_web::{post, get, delete, put, patch};
-use std::sync::Arc;
-use crate::db::MongoDBClient;
+use super::routes::login::login;
+use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
 use crate::config::HttpServerConfig;
+use crate::db::MongoDBClient;
+use actix_web::web::Data;
+use actix_web::{delete, get, patch, post, put};
+use actix_web::{App, HttpServer};
+use std::sync::Arc;
 
-pub async fn run_http_server(mongodb_client: Arc<MongoDBClient>, http_server_config: HttpServerConfig) -> anyhow::Result<()>{
+pub async fn run_http_server(
+    mongodb_client: Arc<MongoDBClient>,
+    http_server_config: HttpServerConfig,
+) -> anyhow::Result<()> {
     HttpServer::new(move || {
         App::new()
             .app_data(Data::from(mongodb_client.clone()))
@@ -19,11 +23,12 @@ pub async fn run_http_server(mongodb_client: Arc<MongoDBClient>, http_server_con
             .service(create_group)
             .service(get_group)
             .service(get_groups)
-            // TODO pass the http server config too as app data
+            .service(login)
+        // TODO pass the http server config too as app data
     })
     .bind(http_server_config.address)
     .unwrap()
     .run()
     .await?;
-    Ok(()) 
+    Ok(())
 }
