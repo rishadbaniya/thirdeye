@@ -16,7 +16,7 @@ use std::{path::PathBuf, env, thread, pin::Pin, future};
 use actix_web::web::Data;
 use actix_web::{HttpServer, App};
 use config::ThirdEyeServerConfig;
-use db::MongoDBClient;
+use db::{MongoDBClient, RedisClient};
 
 use args::Args;
 use clap::Parser;
@@ -38,21 +38,27 @@ struct ThirdEyeServer{
     /// The [MongoDBClient] which acts as a global persistent state for both gRPC server and http
     /// server
     mongodb_client: Arc<MongoDBClient>,
+    
+    /// The [RedisClient] which acts as a datastore to store and invalidate the refresh token
+    redis_client : Arc<RedisClient>
 }
 
 impl ThirdEyeServer{
     pub async fn new(config : Arc<ThirdEyeServerConfig>)-> anyhow::Result<Self>{
         let third_eye_server_config = config;
         let mongodb_client = Arc::new(MongoDBClient::new(third_eye_server_config.mongodb_config.as_ref().unwrap()).await?);
+        let redis_client = Arc::new(RedisClient::new().await?);
 
-       Ok(Self { third_eye_server_config, mongodb_client})
+       Ok(Self { third_eye_server_config, mongodb_client, redis_client})
     }
     
     /// Runs the Http Server as defined in the [config::HttpServerConfig]
     async fn run_http_server(&self) -> anyhow::Result<()>{
         let mongodb_client = self.mongodb_client.clone();
-        let http_server_config = self.third_eye_server_config.http_server_config.clone();
-        run_http_server(mongodb_client, http_server_config).await
+        let redis_client = self.redis_client.clone();
+        let third_eye_server_config = self.third_eye_server_config.clone();
+
+        run_http_server(mongodb_client, redis_client, third_eye_server_config).await
     }
     
     /// Runs the gRPC Server as defined in [config::gRPCServerConfig]
