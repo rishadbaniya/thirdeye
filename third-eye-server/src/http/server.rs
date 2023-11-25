@@ -1,3 +1,4 @@
+use super::middlewares::authorization::AuthReq;
 use super::routes::auth::{login, logout, refresh};
 use super::routes::group::{create_group, get_group, get_groups};
 use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
@@ -22,6 +23,7 @@ pub async fn run_http_server(
             .service(login)
             .service(logout)
             .service(refresh)
+            .wrap(AuthReq)
             .service(create_user)
             .service(get_user)
             .service(get_users)

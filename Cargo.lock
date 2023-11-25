@@ -2423,6 +2423,7 @@ dependencies = [
  "clap",
  "dotenv",
  "futures",
+ "futures-util",
  "jsonwebtoken",
  "log",
  "log4rs",
