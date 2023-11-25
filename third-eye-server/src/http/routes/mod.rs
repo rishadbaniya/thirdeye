@@ -1,4 +1,4 @@
-pub mod user;
+pub mod auth;
 pub mod device;
 pub mod group;
-pub mod auth;
+pub mod user;

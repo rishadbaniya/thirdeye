@@ -1,19 +1,18 @@
 #![allow(non_snake_case)]
 use crate::{
+    config::ThirdEyeServerConfig,
     db::{MongoDBClient, RedisClient},
-    utils::PasswordHasherHandler, config::ThirdEyeServerConfig,
+    utils::PasswordHasherHandler,
 };
 use actix_web::{
-    post,
+    error, post,
     web::{self},
-    HttpResponse, Responder,
-    error,
-    Result
+    HttpResponse, Responder, Result,
 };
 use anyhow::Context;
-use chrono::{ Duration, Local};
+use chrono::{Duration, Local};
 use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
-use mongodb::bson::{Document, doc};
+use mongodb::bson::{doc, Document};
 use serde::{Deserialize, Serialize};
 use serde_json::json;
 
@@ -89,11 +88,11 @@ pub async fn login(
 ) -> Result<impl Responder> {
     let http_server_config = &third_eye_server_config.http_server_config;
     let access_token_expiry_time = http_server_config.access_token_expiry_time;
-    let access_token_key = http_server_config.access_token_key
-          .as_ref()
-          .context("Access Token Key Not Available")
-          .unwrap();
-    
+    let access_token_key = http_server_config
+        .access_token_key
+        .as_ref()
+        .context("Access Token Key Not Available")
+        .unwrap();
 
     let refresh_token_expiry_time = http_server_config.refresh_token_expiry_time;
     let refresh_token_key = http_server_config
@@ -111,14 +110,14 @@ pub async fn login(
         "email" : email,
     };
 
-
     return match users_collection.find_one(user_filter_option, None).await {
         Ok(Some(d)) => {
             if let Some(p) = d.get("password") {
                 let hashed_password = p.as_str().unwrap();
                 let isCorrect = PasswordHasherHandler::verify(password.as_bytes(), hashed_password);
                 if isCorrect {
-                    let access_token_claim = AccessTokenClaim::generate(email, access_token_expiry_time);
+                    let access_token_claim =
+                        AccessTokenClaim::generate(email, access_token_expiry_time);
                     let access_token = encode(
                         &Header::default(),
                         &access_token_claim,
@@ -129,9 +128,10 @@ pub async fn login(
                     .unwrap();
 
                     // a new refresh token
-                    let new_refresh_token_claim = RefreshTokenClaim::generate(email, refresh_token_expiry_time);
+                    let new_refresh_token_claim =
+                        RefreshTokenClaim::generate(email, refresh_token_expiry_time);
                     let refresh_token = encode(
-                       &Header::default(),
+                        &Header::default(),
                         &new_refresh_token_claim,
                         &EncodingKey::from_base64_secret(refresh_token_key)
                             .context("There's some issue with the refresh token key you provided")
@@ -143,15 +143,15 @@ pub async fn login(
                         "access_token" : access_token,
                         "refresh_token" : refresh_token,
                     });
-                    
+
                     Ok(HttpResponse::Ok().body(serde_json::to_string(&login_response).unwrap()))
                 } else {
-                     Err(error::ErrorUnauthorized("Invalid Crednetials"))
+                    Err(error::ErrorUnauthorized("Invalid Crednetials"))
                 }
             } else {
                 log::error!("No any password field for use, for the user with email ${email}");
                 Err(error::ErrorInternalServerError("Internal Server Error"))
-           }
+            }
         }
         Ok(None) => {
             // wrong email from the user but we'll say wrong credentials to the user, not the
@@ -179,7 +179,7 @@ pub async fn refresh(
     mongodb_client: web::Data<MongoDBClient>,
     third_eye_server_config: web::Data<ThirdEyeServerConfig>,
     refresh_request: web::Json<RefreshRequest>,
-) -> Result<impl Responder>  {
+) -> Result<impl Responder> {
     let http_server_config = &third_eye_server_config.http_server_config;
     let access_token_expiry_time = http_server_config.access_token_expiry_time;
     let access_token_key = http_server_config
@@ -210,7 +210,10 @@ pub async fn refresh(
     };
 
     // first we'll check if the refresh token is in the invalidated list or not
-    if redis::Cmd::exists(refresh_token).query(&mut redis_con).unwrap() {
+    if redis::Cmd::exists(refresh_token)
+        .query(&mut redis_con)
+        .unwrap()
+    {
         Err(error::ErrorBadRequest("Used Token"))
     } else {
         let db = &mongodb_client.database;
@@ -224,30 +227,39 @@ pub async fn refresh(
                 let user_filter_option = doc! {
                     "email" : &refresh_token_claim.email
                 };
-                
+
                 // we'll check if the user exists or not anymore
                 return match users_collection.find_one(user_filter_option, None).await {
                     Ok(Some(_)) => {
-                        let new_access_token_claim =
-                            AccessTokenClaim::generate(&refresh_token_claim.email, access_token_expiry_time);
+                        let new_access_token_claim = AccessTokenClaim::generate(
+                            &refresh_token_claim.email,
+                            access_token_expiry_time,
+                        );
 
                         // a new access_token
                         let new_access_token = encode(
                             &Header::default(),
                             &new_access_token_claim,
                             &EncodingKey::from_base64_secret(access_token_key)
-                                .context("There's some issue with the access token key you provided")
+                                .context(
+                                    "There's some issue with the access token key you provided",
+                                )
                                 .unwrap(),
                         )
                         .unwrap();
 
                         // a new refresh token
-                        let new_refresh_token_claim = RefreshTokenClaim::generate(&refresh_token_claim.email, refresh_token_expiry_time);
+                        let new_refresh_token_claim = RefreshTokenClaim::generate(
+                            &refresh_token_claim.email,
+                            refresh_token_expiry_time,
+                        );
                         let new_refresh_token = encode(
                             &Header::default(),
                             &new_refresh_token_claim,
                             &EncodingKey::from_base64_secret(refresh_token_key)
-                                .context("There's some issue with the access token key you provided")
+                                .context(
+                                    "There's some issue with the access token key you provided",
+                                )
                                 .unwrap(),
                         )
                         .unwrap();
@@ -267,7 +279,8 @@ pub async fn refresh(
                                     "new_access_token" : new_access_token,
                                     "new_refresh_token" : new_refresh_token,
                                 });
-                                Ok(HttpResponse::Ok().body(serde_json::to_string(&refresh_response).unwrap()))
+                                Ok(HttpResponse::Ok()
+                                    .body(serde_json::to_string(&refresh_response).unwrap()))
                             }
                             Err(err) => {
                                 log::error!("Error in invalidating the refresh token {refresh_token} | ${err:?}");
@@ -323,7 +336,10 @@ pub async fn logout(
     };
 
     // first we'll check if the refresh token is in the invalidated list or not
-    if redis::Cmd::exists(refresh_token).query(&mut redis_con).unwrap() {
+    if redis::Cmd::exists(refresh_token)
+        .query(&mut redis_con)
+        .unwrap()
+    {
         Err(error::ErrorBadRequest("Token already considered invalid"))
     } else {
         match decode::<RefreshTokenClaim>(refresh_token, &decoding_key, &validation) {
@@ -337,7 +353,9 @@ pub async fn logout(
                 {
                     Ok(_) => Ok(HttpResponse::Ok().body("Logged out")),
                     Err(err) => {
-                        log::error!("Error in invalidating the refresh token {refresh_token} | ${err:?}");
+                        log::error!(
+                            "Error in invalidating the refresh token {refresh_token} | ${err:?}"
+                        );
                         return Err(error::ErrorInternalServerError("Internal Server Error"));
                     }
                 };
@@ -346,4 +364,3 @@ pub async fn logout(
         }
     }
 }
-

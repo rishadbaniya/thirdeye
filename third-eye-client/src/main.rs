@@ -45,8 +45,8 @@ impl ThirdEyeClient {
     async fn send_sys_info(&self) {
         let mut client = self.client.clone();
         let system = self.system.clone();
-        let sys_info_config = Arc::new(RwLock::new(self.config.sys_info_config.clone())); 
-        
+        let sys_info_config = Arc::new(RwLock::new(self.config.sys_info_config.clone()));
+
         let _sys_info_config = sys_info_config.clone();
         let outbound = async_stream::stream! {
             loop{
@@ -81,11 +81,11 @@ impl ThirdEyeClient {
                tokio::time::sleep(Duration::from_secs(sleep_duration)).await;
             }
         };
-    
+
         let resp = client.send_sys_info(Request::new(outbound)).await.unwrap();
         let mut inbound = resp.into_inner();
 
-        while let Some(new_sys_info_config) = inbound.message().await.unwrap(){
+        while let Some(new_sys_info_config) = inbound.message().await.unwrap() {
             let mut sys_info_config_w = _sys_info_config.write().await;
             *sys_info_config_w = new_sys_info_config;
         }
@@ -109,14 +109,13 @@ impl ThirdEyeClient {
         let resp = client.get_command(Request::new(outbound)).await.unwrap();
         let mut inbound = resp.into_inner();
 
-        while let Some(command_req) = inbound.message().await.unwrap(){
+        while let Some(command_req) = inbound.message().await.unwrap() {
             cr_sd.send(command_req);
         }
     }
 
-    async fn execute_command(&self){}
+    async fn execute_command(&self) {}
 }
 
 #[tokio::main]
-async fn main() {
-}
+async fn main() {}

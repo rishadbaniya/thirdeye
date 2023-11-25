@@ -2,7 +2,7 @@ use anyhow::Context;
 use serde::Deserialize;
 
 use crate::args::Args;
-use std::{fs::File, io::Read, env};
+use std::{env, fs::File, io::Read};
 
 #[derive(Debug, Deserialize)]
 pub struct ThirdEyeServerConfig {
@@ -10,15 +10,12 @@ pub struct ThirdEyeServerConfig {
     #[serde(skip_deserializing)]
     pub mongodb_config: Option<MongoDBConfig>,
 
-    #[serde(rename="http_server")]
+    #[serde(rename = "http_server")]
     pub http_server_config: HttpServerConfig,
 
-    #[serde(rename="grpc_server")]
+    #[serde(rename = "grpc_server")]
     pub grpc_server_config: gRPCServerConfig,
-
-
 }
-
 
 // The config for MongoDB Database
 #[derive(Debug, Clone)]
@@ -30,18 +27,19 @@ pub struct MongoDBConfig {
     pub password: String,
 
     pub database: String,
-
 }
 
-impl ThirdEyeServerConfig{
+impl ThirdEyeServerConfig {
     pub fn from_env_and_config_file(args: &Args) -> anyhow::Result<Self> {
         dotenv::from_path(args.env.as_str()).context("env file missing!")?;
 
         let mut third_eye_server_config: ThirdEyeServerConfig = {
             let config_file_path = args.config.as_str();
-            let mut config_file = File::open(config_file_path).context("The config file doesn't exist")?;
+            let mut config_file =
+                File::open(config_file_path).context("The config file doesn't exist")?;
             let mut config_file_contents = String::new();
-            config_file.read_to_string(&mut config_file_contents)
+            config_file
+                .read_to_string(&mut config_file_contents)
                 .context("Error in reading the config file")?;
 
             toml::from_str(config_file_contents.as_str())?
@@ -49,7 +47,10 @@ impl ThirdEyeServerConfig{
 
         macro_rules! env_var {
             ($v:ident) => {
-                env::var(stringify!($v)).context(concat!(stringify!($v), " not found as environment variable"))?
+                env::var(stringify!($v)).context(concat!(
+                    stringify!($v),
+                    " not found as environment variable"
+                ))?
             };
         }
 
@@ -80,12 +81,12 @@ impl ThirdEyeServerConfig{
 }
 
 #[derive(Debug, Deserialize, Clone)]
-pub struct HttpServerConfig{
-    pub address : String,
+pub struct HttpServerConfig {
+    pub address: String,
 
     /// Email of users that can't be deleted
     pub undeletable: Vec<String>,
-    
+
     /// Default admin full name
     pub default_admin_fullName: String,
 
@@ -111,6 +112,6 @@ pub struct HttpServerConfig{
 }
 
 #[derive(Debug, Deserialize, Clone)]
-pub struct gRPCServerConfig{
-    pub address : String
+pub struct gRPCServerConfig {
+    pub address: String,
 }

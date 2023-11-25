@@ -1,17 +1,17 @@
 use super::routes::auth::{login, logout, refresh};
-use super::routes::user::{create_user, get_user, get_users, update_user, delete_user};
 use super::routes::group::{create_group, get_group, get_groups};
-use actix_web::web::Data;
-use actix_web::{HttpServer, App};
-use std::sync::Arc;
-use crate::db::{MongoDBClient, RedisClient};
+use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
 use crate::config::ThirdEyeServerConfig;
+use crate::db::{MongoDBClient, RedisClient};
+use actix_web::web::Data;
+use actix_web::{App, HttpServer};
+use std::sync::Arc;
 
 pub async fn run_http_server(
     mongodb_client: Arc<MongoDBClient>,
     redis_client: Arc<RedisClient>,
-    third_eye_server_config: Arc<ThirdEyeServerConfig>
-) -> anyhow::Result<()>{
+    third_eye_server_config: Arc<ThirdEyeServerConfig>,
+) -> anyhow::Result<()> {
     let http_server_addr = third_eye_server_config.http_server_config.address.clone();
 
     HttpServer::new(move || {
@@ -30,11 +30,11 @@ pub async fn run_http_server(
             .service(create_group)
             .service(get_group)
             .service(get_groups)
-            // TODO pass the http server config too as app data
+        // TODO pass the http server config too as app data
     })
     .bind(http_server_addr)
     .unwrap()
     .run()
     .await?;
-    Ok(()) 
+    Ok(())
 }
