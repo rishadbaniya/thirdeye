@@ -346,3 +346,81 @@
 2023-11-25T16:43:12.838972455+05:45 [actix_server::worker] INFO- shutting down idle worker
 2023-11-25T16:43:12.839018268+05:45 [actix_server::accept] INFO- accept thread stopped
 2023-11-25T16:43:12.839054144+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T16:47:33.425069494+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T16:47:33.425575770+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T16:47:33.426297690+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T16:47:33.426372068+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T17:01:29.776252922+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2023-11-25T17:01:29.776469771+05:45 [h2::server] DEBUG- connection error PROTOCOL_ERROR -- read_preface: invalid preface;
+2023-11-25T17:01:29.776493979+05:45 [hyper::server::server::new_svc] DEBUG- connection error: http2 error: connection error detected: unspecific protocol error detected
+2023-11-25T17:20:04.803291844+05:45 [actix_server::server] INFO- SIGTERM received; starting graceful shutdown
+2023-11-25T17:20:04.803667798+05:45 [actix_server::worker] INFO- shutting down idle worker
+2023-11-25T22:04:17.234269244+05:45 [third_eye_server] INFO- Loading the environment variables from config/example.env
+2023-11-25T22:04:17.235381933+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2023-11-25T22:04:17.236098126+05:45 [actix_server::builder] INFO- starting 12 workers
+2023-11-25T22:04:17.236150383+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2023-11-25T22:06:10.526933698+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2023-11-25T22:06:10.527123700+05:45 [h2::server] DEBUG- connection error PROTOCOL_ERROR -- read_preface: invalid preface;
+2023-11-25T22:06:10.527148367+05:45 [hyper::server::server::new_svc] DEBUG- connection error: http2 error: connection error detected: unspecific protocol error detected
+2023-11-25T22:07:03.972357843+05:45 [third_eye_server::http::routes::user] ERROR- Database Error | $Error { kind: ServerSelection { message: "Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27017, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }" }, labels: {}, wire_version: None, source: None }
+2023-11-25T22:07:22.577454524+05:45 [third_eye_server::http::routes::user] ERROR- Database Error | $Error { kind: ServerSelection { message: "Server selection timeout: No available servers. Topology: { Type: Unknown, Servers: [ { Address: localhost:27017, Type: Unknown, Error: Kind: I/O error: Connection refused (os error 111), labels: {} } ] }" }, labels: {}, wire_version: None, source: None }
+2023-11-26T00:12:09.743948226+05:45 [actix_server::server] INFO- SIGTERM received; starting graceful shutdown
+2023-11-26T00:12:09.746692688+05:45 [actix_server::worker] INFO- shutting down idle worker
