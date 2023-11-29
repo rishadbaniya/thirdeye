@@ -8,7 +8,7 @@ pub struct ThirdEyeClientConfig {
 
     /// The port of the EyeServer
     pub port: u16,
-    
+
     /// The configuration to exchange the SysInfo
     pub sys_info_config: SysInfoConfig,
 }

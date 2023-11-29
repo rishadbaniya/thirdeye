@@ -54,4 +54,3 @@ message SysInfoConfig{
     /// The interval at which SysInfo should be sent(in seconds)
     uint32 interval = 1;
 }
-

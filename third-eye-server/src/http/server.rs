@@ -1,18 +1,31 @@
-use super::routes::user::{create_user, get_user, get_users, update_user, delete_user};
-use super::routes::group::{create_group, get_group, get_groups};
-use super::routes::device::create_device;
+use super::middlewares::authorization::AuthReq;
+use super::routes::auth::{login, logout, refresh};
 use super::routes::change_handler::run_ws_server;
+use super::routes::device::create_device;
+use super::routes::group::{create_group, get_group, get_groups};
+use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
+use crate::config::ThirdEyeServerConfig;
+use crate::db::{MongoDBClient, RedisClient};
 use actix_web::web::Data;
-use actix_web::{HttpServer, App};
-use actix_web::{post, get, delete, put, patch};
+use actix_web::{App, HttpServer};
 use std::sync::Arc;
-use crate::db::MongoDBClient;
-use crate::config::HttpServerConfig;
 
-pub async fn run_http_server(mongodb_client: Arc<MongoDBClient>, http_server_config: HttpServerConfig) -> anyhow::Result<()>{
+pub async fn run_http_server(
+    mongodb_client: Arc<MongoDBClient>,
+    redis_client: Arc<RedisClient>,
+    third_eye_server_config: Arc<ThirdEyeServerConfig>,
+) -> anyhow::Result<()> {
+    let http_server_addr = third_eye_server_config.http_server_config.address.clone();
+
     HttpServer::new(move || {
         App::new()
             .app_data(Data::from(mongodb_client.clone()))
+            .app_data(Data::from(redis_client.clone()))
+            .app_data(Data::from(third_eye_server_config.clone()))
+            .service(login)
+            .service(logout)
+            .service(refresh)
+            .wrap(AuthReq)
             .service(create_user)
             .service(get_user)
             .service(get_users)
@@ -23,12 +36,11 @@ pub async fn run_http_server(mongodb_client: Arc<MongoDBClient>, http_server_con
             .service(get_groups)
             .service(create_device)
             .route("/fetch-change", actix_web::web::get().to(run_ws_server))
-            // TODO pass the http server config too as app data
+        // TODO pass the http server config too as app data
     })
-    .bind(http_server_config.address)
+    .bind(http_server_addr)
     .unwrap()
     .run()
     .await?;
-    Ok(()) 
+    Ok(())
 }
-
