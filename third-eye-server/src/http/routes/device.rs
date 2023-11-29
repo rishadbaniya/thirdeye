@@ -1,12 +1,10 @@
 use crate::utils::PasswordHasherHandler;
-use crate::utils::PasswordHasherHandler;
 use crate::{db::MongoDBClient, DeploymentDeviceInformation};
 use actix_web::{
     delete, dev, error, get, post, put, web, HttpRequest, HttpResponse, Responder, Result,
 };
 use futures::StreamExt;
 use mongodb::bson::{doc, Bson, Document};
-use mongodb::options::FindOptions;
 use mongodb::options::FindOptions;
 use serde::{Deserialize, Serialize};
 
