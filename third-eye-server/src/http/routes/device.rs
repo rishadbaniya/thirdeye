@@ -8,7 +8,7 @@ use mongodb::bson::{doc, Bson, Document};
 use mongodb::options::FindOptions;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct NewDevice {
     /// The unique name of the device
     pub deviceName: String,
@@ -18,7 +18,7 @@ pub struct NewDevice {
 
     /// The information over time
     #[serde(default = "default_information")]
-    pub information: Option<Vec<DeploymentDeviceInformation>>,
+    information: Option<Vec<DeploymentDeviceInformation>>,
 }
 
 fn default_information() -> Option<Vec<DeploymentDeviceInformation>> {
