@@ -1,8 +1,8 @@
 use super::middlewares::authorization::AuthReq;
 use super::routes::auth::{login, logout, refresh};
-use super::routes::change_handler::run_ws_server;
 use super::routes::device::create_device;
 use super::routes::group::{create_group, get_group, get_groups};
+use super::routes::poll_device_change::run_ws_server;
 use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
 use crate::config::ThirdEyeServerConfig;
 use crate::db::{MongoDBClient, RedisClient};
