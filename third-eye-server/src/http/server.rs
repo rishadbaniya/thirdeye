@@ -6,6 +6,7 @@ use super::routes::poll_device_change::run_ws_server;
 use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
 use crate::config::ThirdEyeServerConfig;
 use crate::db::{MongoDBClient, RedisClient};
+use actix_cors::Cors;
 use actix_web::web::Data;
 use actix_web::{App, HttpServer};
 use std::sync::Arc;
@@ -18,7 +19,11 @@ pub async fn run_http_server(
     let http_server_addr = third_eye_server_config.http_server_config.address.clone();
 
     HttpServer::new(move || {
+        // TODO: Change to more restrictive rules. permissive() is only for development.
+        let cors = Cors::permissive();
+
         App::new()
+            .wrap(cors)
             .app_data(Data::from(mongodb_client.clone()))
             .app_data(Data::from(redis_client.clone()))
             .app_data(Data::from(third_eye_server_config.clone()))
