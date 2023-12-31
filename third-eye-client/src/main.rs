@@ -4,6 +4,7 @@ use std::sync::Arc;
 use std::time::Duration;
 use tokio::join;
 use tokio::sync::RwLock;
+use clap::Parser;
 
 use sysinfo::{CpuExt, System, SystemExt};
 
@@ -20,6 +21,7 @@ use data_exchange::{Command, CommandRequest, CommandResponse, SysInfo, SysInfoCo
 use config::ThirdEyeClientConfig;
 use tonic::transport::Channel;
 use tonic::Request;
+use args::Args;
 
 pub struct ThirdEyeClient {
     /// The configuration for the [ThirdEyeClient]
@@ -33,34 +35,51 @@ pub struct ThirdEyeClient {
 }
 
 impl ThirdEyeClient {
-    pub fn new() {}
+    pub async fn new(config : ThirdEyeClientConfig) -> Self {
+        let mut client = DataExchangeServiceClient::connect(config.address.clone()).await.unwrap();
+        let system = Arc::new(RwLock::new(System::new()));
+
+        Self{
+            config,
+            system,
+            client
+        }
+    }
 
     pub async fn initiate_data_exchange(&self) {
         let send_sys_info = self.send_sys_info();
         let get_command = self.get_command();
 
-        join!(send_sys_info, get_command);
+        join!(send_sys_info
+        //, get_command
+    );
     }
 
     async fn send_sys_info(&self) {
         let mut client = self.client.clone();
         let system = self.system.clone();
-        let sys_info_config = Arc::new(RwLock::new(self.config.sys_info_config.clone()));
+        let sys_info_config = Arc::new(RwLock::new(SysInfoConfig{ interval: 5 }));
 
         let _sys_info_config = sys_info_config.clone();
+        let id = self.config.id.clone();
         let outbound = async_stream::stream! {
             loop{
+
                 let sys_info = {
-                    let system_r = system.read().await;
-                    let cpu_cores = system_r.cpus().iter().len() as u32;
-                    let cpu_frequency = system_r.global_cpu_info().frequency() as u32;
-                    let cpu_brand = system_r.global_cpu_info().brand().to_string();
-                    let memory_size = system_r.total_memory() as u32;
-                    let memory_available = system_r.available_memory() as u32;
-                    let memory_used = system_r.used_memory() as u32;
-                    let uptime = system_r.uptime() as u32;
+                    let mut system_w = system.write().await;
+                    system_w.refresh_all();
+
+                    let id = id.clone();
+                    let cpu_cores = system_w.cpus().iter().len() as u32;
+                    let cpu_frequency = system_w.global_cpu_info().frequency() as u32;
+                    let cpu_brand = system_w.global_cpu_info().brand().to_string();
+                    let memory_size = system_w.total_memory() as u32;
+                    let memory_available = system_w.available_memory() as u32;
+                    let memory_used = system_w.used_memory() as u32;
+                    let uptime = system_w.uptime() as u32;
 
                     SysInfo{
+                        id,
                         cpu_cores,
                         cpu_frequency,
                         memory_size,
@@ -118,4 +137,12 @@ impl ThirdEyeClient {
 }
 
 #[tokio::main]
-async fn main() {}
+async fn main() -> anyhow::Result<()>{
+    let args = Args::parse();
+
+    let third_eye_client_config = ThirdEyeClientConfig::from_config_file(&args)?;
+    let third_eye_client = ThirdEyeClient::new(third_eye_client_config).await;
+
+    third_eye_client.initiate_data_exchange().await;
+    Ok(())
+}

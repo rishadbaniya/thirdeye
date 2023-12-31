@@ -20,7 +20,7 @@ pub async fn run_http_server(
 
     HttpServer::new(move || {
         // TODO: Change to more restrictive rules. permissive() is only for development.
-        let cors = Cors::permissive();
+        let mut cors = Cors::permissive().expose_headers(["Content-Range"]);
 
         App::new()
             .wrap(cors)

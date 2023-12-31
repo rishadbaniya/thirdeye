@@ -6,6 +6,7 @@ use mongodb::bson::oid::ObjectId;
 use mongodb::bson::{doc, Bson, Document};
 use mongodb::options::FindOptions;
 use serde::{Deserialize, Serialize};
+use crate::utils::_id_mongodb_serializer;
 
 #[derive(Serialize, Deserialize)]
 pub struct NewGroup {
@@ -72,20 +73,13 @@ pub struct Updatedgroup {
 //        doc
 //    }
 //}
-//
 
-fn _id_mongodb_serializer<S>(oid: &ObjectId, serializer: S) -> Result<S::Ok, S::Error>
-where
-    S: serde::Serializer,
-{
-    serializer.serialize_str(&oid.to_hex())
-}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Group {
     /// The unique id of the group
-    #[serde(rename = "_id", serialize_with = "_id_mongodb_serializer")]
-    pub id: ObjectId,
+    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))] 
+    pub _id: ObjectId,
 
     /// The unique name of the group
     pub groupName: String,
@@ -209,17 +203,9 @@ pub async fn get_groups(
                     error::ErrorInternalServerError("Coudln't count total no of groups")
                 })? as i32;
 
-            // Ok(web::Json(AllGroups {
-            //     data: groups,
-            //     count,
-            // }))
-            // #[derive(Serialize)]
-            // struct GroupResponse {
-            //     data: Vec<Group>,
-            // }
             println!("groups: {:?}", groups);
-            let serealized_group = serde_json::to_string(&groups).unwrap();
-            println!("serealized_group: {:?}", serealized_group);
+            let serialized_group = serde_json::to_string(&groups).unwrap();
+            println!("serialized_group: {:?}", serialized_group);
 
             let response = HttpResponse::Ok()
                 .content_type("application/json")
@@ -227,7 +213,7 @@ pub async fn get_groups(
                     "Content-Range",
                     format!("groups {}-{}/{}", skip, skip + per_page, count),
                 ))
-                .body(serealized_group);
+                .body(serialized_group);
 
             Ok(response)
         }

@@ -1,0 +1,2 @@
+id = "computer1"
+address = "http://0.0.0.0:8080" # The address of the eye server

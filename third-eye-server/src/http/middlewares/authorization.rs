@@ -3,7 +3,7 @@ use std::future::{ready, Ready};
 use actix_web::{
     body::EitherBody,
     dev::{self, Service, ServiceRequest, ServiceResponse, Transform},
-    Error, HttpResponse,
+    Error, HttpResponse, guard::Method,
 };
 use futures_util::future::LocalBoxFuture;
 use jsonwebtoken::{decode, DecodingKey, Validation};
@@ -46,42 +46,45 @@ where
     dev::forward_ready!(service);
 
     fn call(&self, req: ServiceRequest) -> Self::Future {
-        // we will allow /login, /refresh, /logout to be public because it should be accessible by everyone
-        if req.path() != "/login" && req.path() == "/refresh" && req.path() != "/logout" {
-            // TODO: Use key from the config
-            let key = "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4";
-            let decoding_key = DecodingKey::from_base64_secret(key).unwrap();
+        println!("A REQUEST CAME TO MIDDLEWARE");
+        // TODO: Add middleware
 
-            return if let Some(token) = req.headers().get("Authorization") {
-                let mut validation = Validation::default();
-                validation.required_spec_claims.clear();
-                match decode::<AccessTokenClaim>(
-                    token.to_str().unwrap(),
-                    &decoding_key,
-                    &validation,
-                ) {
-                    Ok(_) => {
-                        let res = self.service.call(req);
-                        Box::pin(async move { res.await.map(ServiceResponse::map_into_left_body) })
-                    }
-                    Err(_) => Box::pin(async move {
-                        Ok(req.into_response(
-                            HttpResponse::Unauthorized()
-                                .body("Invalid authorization credentials")
-                                .map_into_right_body(),
-                        ))
-                    }),
-                }
-            } else {
-                Box::pin(async move {
-                    Ok(req.into_response(
-                        HttpResponse::Unauthorized()
-                            .body("No authorization credentials")
-                            .map_into_right_body(),
-                    ))
-                })
-            };
-        }
+        // we will allow /login, /refresh, /logout to be public because it should be accessible by everyone
+      //  if req.path() != "/login" && req.path() != "/refresh" && req.path() != "/logout" && req.method() != actix_web::http::Method::OPTIONS{
+      //      // TODO: Use key from the config
+      //      let key = "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4";
+      //      let decoding_key = DecodingKey::from_base64_secret(key).unwrap();
+
+      //      return if let Some(token) = req.headers().get("Authorization") {
+      //          let mut validation = Validation::default();
+      //          validation.required_spec_claims.clear();
+      //          match decode::<AccessTokenClaim>(
+      //              token.to_str().unwrap(),
+      //              &decoding_key,
+      //              &validation,
+      //          ) {
+      //              Ok(_) => {
+      //                  let res = self.service.call(req);
+      //                  Box::pin(async move { res.await.map(ServiceResponse::map_into_left_body) })
+      //              }
+      //              Err(_) => Box::pin(async move {
+      //                  Ok(req.into_response(
+      //                      HttpResponse::Unauthorized()
+      //                          .body("Invalid authorization credentials")
+      //                          .map_into_right_body(),
+      //                  ))
+      //              }),
+      //          }
+      //      } else {
+      //          Box::pin(async move {
+      //              Ok(req.into_response(
+      //                  HttpResponse::Unauthorized()
+      //                      .body("No authorization credentials")
+      //                      .map_into_right_body(),
+      //              ))
+      //          })
+      //      };
+      //  }
 
         let res = self.service.call(req);
         Box::pin(async move { res.await.map(ServiceResponse::map_into_left_body) })

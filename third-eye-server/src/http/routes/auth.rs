@@ -5,7 +5,7 @@ use crate::{
     utils::PasswordHasherHandler,
 };
 use actix_web::{
-    error, post,
+    error, post, get,
     web::{self},
     HttpResponse, Responder, Result,
 };
@@ -146,7 +146,7 @@ pub async fn login(
 
                     Ok(HttpResponse::Ok().body(serde_json::to_string(&login_response).unwrap()))
                 } else {
-                    Err(error::ErrorUnauthorized("Invalid Crednetials"))
+                    Err(error::ErrorUnauthorized("Invalid Credentials"))
                 }
             } else {
                 log::error!("No any password field for use, for the user with email ${email}");

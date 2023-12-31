@@ -5,7 +5,7 @@ package data_exchange;
 service DataExchangeService{
     /// Send System Information to the server and get the configuration for SysInfo
     rpc sendSysInfo(stream SysInfo) returns (stream SysInfoConfig);
-    
+
     /// Waits for a command from the server and sends the response
     rpc getCommand(stream CommandResponse) returns (stream CommandRequest);
 
@@ -26,26 +26,31 @@ message CommandResponse{
 
 /// The current System Information
 message SysInfo{
+
+    /// Special identifier given to the computer by deployer
+    string id = 1;
+
     /// The number of CPU cores
-    uint32 cpu_cores = 1;
+    uint32 cpu_cores = 2;
 
     /// The CPU frequency
-    uint32 cpu_frequency = 2;
+    uint32 cpu_frequency = 3;
 
     /// The CPU frequency
-    string cpu_brand = 3;
+    string cpu_brand = 4;
 
     /// The total memory size
-    uint32 memory_size = 4;
+    uint32 memory_size = 5;
 
     /// The total memory available
-    uint32 memory_available = 5;
-    
+    uint32 memory_available = 6;
+
     /// The total memory used
-    uint32 memory_used = 6;
+    uint32 memory_used = 7;
 
     /// The system uptime
-    uint32 uptime = 15;
+    uint32 uptime = 8;
+
 }
 
 /// Configures how SysInfo should be sent

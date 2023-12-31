@@ -1,10 +1,14 @@
+use std::str::FromStr;
+
 use crate::db::MongoDBClient;
 use crate::utils::PasswordHasherHandler;
 use actix_web::{delete, error, get, post, put, web, HttpRequest, HttpResponse, Responder, Result};
 use futures::StreamExt;
+use mongodb::bson::oid::ObjectId;
 use mongodb::bson::{doc, Document};
 use mongodb::options::FindOptions;
 use serde::{Deserialize, Serialize};
+use crate::utils::_id_mongodb_serializer;
 
 #[derive(Serialize, Deserialize)]
 pub struct NewUser {
@@ -59,6 +63,10 @@ impl Into<mongodb::bson::Document> for UpdatedUser {
 
 #[derive(Serialize, Deserialize)]
 pub struct User {
+    /// The unique id of the group
+    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
+    pub _id: ObjectId,
+
     /// Full name of the user
     pub fullName: String,
 
@@ -75,12 +83,12 @@ pub struct AllUsers {
     data: Vec<User>,
 
     /// Total no of Users
-    count: i32,
+    total: i32,
 }
 
 use mongodb::bson::Bson;
 
-#[post("/user")]
+#[post("/users")]
 pub async fn create_user(
     mongodb_client: web::Data<MongoDBClient>,
     new_user: web::Json<NewUser>,
@@ -130,6 +138,7 @@ pub async fn get_users(
     mongodb_client: web::Data<MongoDBClient>,
     req: HttpRequest,
 ) -> Result<impl Responder> {
+    println!("THE REQUEST GOT HERE");
     let db = &mongodb_client.database;
     let users_collection = db.collection::<User>("users");
 
@@ -159,7 +168,7 @@ pub async fn get_users(
                     error::ErrorInternalServerError("Couldn't retrieve some users")
                 })?);
             }
-            let count = users_collection
+            let total = users_collection
                 .count_documents(None, None)
                 .await
                 .map_err(|err| {
@@ -167,7 +176,7 @@ pub async fn get_users(
                     error::ErrorInternalServerError("Coudln't count total no of users")
                 })? as i32;
 
-            Ok(web::Json(AllUsers { data: users, count }))
+            Ok(web::Json(AllUsers { data: users, total }))
         }
         Err(err) => {
             log::error!("Database Error | ${err:?}");
@@ -176,18 +185,18 @@ pub async fn get_users(
     }
 }
 
-#[get("/user/{email}")]
+#[get("/users/{id}")]
 pub async fn get_user(
     mongodb_client: web::Data<MongoDBClient>,
     path: web::Path<String>,
 ) -> impl Responder {
-    let email = path.into_inner();
+    let id = path.into_inner();
 
     let db = &mongodb_client.database;
     let users_collection = db.collection::<User>("users");
 
     let user_filter_option = doc! {
-        "email" : email
+        "_id" : ObjectId::from_str(&id).unwrap()
     };
 
     match users_collection.find_one(user_filter_option, None).await {
@@ -200,7 +209,7 @@ pub async fn get_user(
     }
 }
 
-#[delete("/user/{email}")]
+#[delete("/users/{email}")]
 pub async fn delete_user(
     mongodb_client: web::Data<MongoDBClient>,
     path: web::Path<String>,
@@ -231,7 +240,7 @@ pub async fn delete_user(
     }
 }
 
-#[put("/user/{email}")]
+#[put("/users/{email}")]
 pub async fn update_user(
     mongodb_client: web::Data<MongoDBClient>,
     path: web::Path<String>,

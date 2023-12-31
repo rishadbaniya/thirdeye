@@ -3,6 +3,7 @@ use argon2::{
     Argon2, Params, PasswordHash, PasswordVerifier,
 };
 use std::str;
+use mongodb::bson::oid::ObjectId;
 
 pub struct PasswordHasherHandler;
 
@@ -38,4 +39,11 @@ impl PasswordHasherHandler {
         }
         return false;
     }
+}
+
+pub fn _id_mongodb_serializer<S>(oid: &ObjectId, serializer: S) -> Result<S::Ok, S::Error>
+where
+    S: serde::Serializer,
+{
+    serializer.serialize_str(&oid.to_hex())
 }

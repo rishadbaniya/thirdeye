@@ -24,10 +24,11 @@ use data_exchange::{CommandRequest, SysInfo, SysInfoConfig};
 use futures::stream::Stream;
 use futures::StreamExt;
 use http::server::run_http_server;
-use log::info;
+use log::{info, error};
 use mongodb::bson::{self, doc, Bson, Document};
 use tokio::task::{self, JoinHandle};
 use tokio::{join, try_join};
+use utils::PasswordHasherHandler;
 
 use serde::{Deserialize, Serialize};
 use tonic::transport::Server;
@@ -82,8 +83,49 @@ impl ThirdEyeServer {
         // TODO : log if the the grpc server fails
     }
 
+    async fn createDefaultUserIfDoesntExist(&self){
+         let primary_email = &self.third_eye_server_config.http_server_config.default_admin_email;
+
+         let db = &self.mongodb_client;
+         let users_collection = db.database.collection::<Document>("users");
+
+         let user_filter_option = doc! {
+             "email" : &primary_email,
+         };
+
+         match users_collection.find_one(user_filter_option, None).await {
+             Ok(Some(_)) => info!("The default user already exists!. So, won't be creating it"),
+             Ok(None) => {
+                info!("Default user not found! Creating a default user from the config");
+                 let password = &self.third_eye_server_config.http_server_config.default_admin_password;
+                 let hashed_password = PasswordHasherHandler::hash(password.as_bytes());
+                 let full_name = &self.third_eye_server_config.http_server_config.default_admin_fullName;
+
+                 let default_admin = doc! {
+                     "email" : primary_email,
+                     "fullName" : full_name,
+                     "password" : hashed_password,
+                 };
+
+                 if users_collection.insert_one(default_admin, None).await.is_ok() {
+                     info!("Successfully created a default user from the config");
+                 } else {
+                     error!("Failed to create a default user from the config");
+                 }
+             }
+
+             Err(e) => {
+                 error!("Error while trying to find if the default user already exits or not | {e:?}");
+                 panic!();
+             }
+        };
+
+    }
+
     /// Runs both gRPC server and HTTP Server
     pub async fn run(self) {
+        self.createDefaultUserIfDoesntExist().await;
+
         let run_http_server = { self.run_http_server() };
 
         let run_grpc_server = { self.run_grpc_server() };
@@ -104,7 +146,7 @@ async fn main() -> anyhow::Result<()> {
 
     let third_eye_server_config = Arc::new(ThirdEyeServerConfig::from_env_and_config_file(&args)?);
 
-    // TODO: Don't log the password and other credentials on the log file, ailelai it's easier so
+    // TODO: Don't log the password and other credentials on the log file, for now it's easier so
     // allowed in development
     info!("Current configs set to {third_eye_server_config:#?}");
 
@@ -141,37 +183,47 @@ impl DataExchangeService for ThirdEyeGRPCService {
     ) -> std::result::Result<tonic::Response<Self::sendSysInfoStream>, tonic::Status> {
         let mongodb_client = self.mongodb_client.clone();
 
-        let deployment_devices = mongodb_client
+        let devices_collection = mongodb_client
             .database
-            .collection::<DeploymentDevice>("deployment_devices");
+            .collection::<DeploymentDevice>("devices");
 
+        // Stream of incoming data
         let mut incoming = request.into_inner();
-        let outgoing = async_stream::try_stream! {
             while let Some(Ok(sys_info)) = incoming.next().await{
-                let group_name = &sys_info.group_name;
-                let device_name = &sys_info.device_name;
+                let device_id : String = sys_info.id.clone();
 
-                let deployment_device_filter = bson::doc!{
-                    "groupName" : group_name,
-                    "deviceName" : device_name
+                let device_filter = bson::doc!{
+                    "device_id" : device_id,
                 };
 
-
-               let deployment_device_info = DeploymentDeviceInformation::fromSysInfo(sys_info);
-                let deployment_device_update = bson::doc!{
-                    "$push": {
-                        "devices": deployment_device_info
+                let update = doc! { "$addToSet": {
+                        "resources" : {
+                        "cpu_cores" : sys_info.cpu_cores,
+                        "cpu_frequency" : sys_info.cpu_frequency,
+                        "cpu_brand" : sys_info.cpu_brand,
+                        "memory_size" : sys_info.memory_size,
+                        "memory_available" : sys_info.memory_available,
+                        "memory_used" : sys_info.memory_used,
+                        "uptime" : sys_info.uptime,
+                        "time" : SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs() as i32
+                        }
                     }
                 };
-
-                match deployment_devices.update_one(deployment_device_filter, deployment_device_update, None).await {
-                    Ok(xx) => {
+                match devices_collection
+                    .update_one(device_filter, update, None)
+                    .await
+                {
+                    Ok(v) => {
+                        // TODO: Don't know what to do after inserting successfully
                     }
-                    Err(ee) => {
+                    Err(e) => {
+                        // TOOD: If faled then simply wait for next one or log the error
                     }
-                };
-            }
+                }
+        }
 
+        let outgoing = async_stream::try_stream! {
+            tokio::time::sleep(tokio::time::Duration::from_secs(5)).await;
             yield SysInfoConfig{
                 interval : 20
             };
@@ -275,3 +327,41 @@ impl From<DeploymentDeviceInformationConfig> for Bson {
         bson::to_bson(&value).unwrap()
     }
 }
+
+//            while let Some(Ok(sys_info)) = incoming.next().await{
+//                let id : String = sys_info.id.clone();
+//
+//                let device_filter = bson::doc!{
+//                    "id" : id,
+//                };
+//
+//                println!("{:#?}", sys_info);
+//                //let deployment_device_filter = bson::doc!{
+//                    //"deviceName" : id,
+//                //};
+//                //let deployment_device_info = DeploymentDeviceInformation::fromSysInfo(sys_info);
+//                //let deployment_device_update = bson::doc!{
+//                    //"$push": {
+//                //"sys_info": deployment_device_info
+//                    //}
+//                //};
+//                //match deployment_devices.update_one(deployment_device_filter, deployment_device_update, None).await {
+//                    //Ok(xx) => {
+//                    //}
+//                    //Err(ee) => {
+//                    //}
+//                //};
+//               //let deployment_device_info = DeploymentDeviceInformation::fromSysInfo(sys_info);
+//                //let deployment_device_update = bson::doc!{
+//                    //"$push": {
+//                        //"devices": deployment_device_info
+//                    //}
+//                //};
+//
+//                //match deployment_devices.update_one(deployment_device_filter, deployment_device_update, None).await {
+//                    //Ok(xx) => {
+//                    //}
+//                    //Err(ee) => {
+//                    //}
+//                //};
+//            }
