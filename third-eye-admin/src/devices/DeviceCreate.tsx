@@ -2,6 +2,7 @@ import {
   List,
   TextInput,
   Datagrid,
+  NumberField,
   Create,
   SimpleForm,
   required,
@@ -16,19 +17,23 @@ import React, { useEffect, useState } from "react";
 
 //import {uploadImage} from '../utils';
 
-const UserCreate = () => {
-  const validateUserCreation = (values: UserCreateValues) => {
-    const errors: UserCreateValues = {};
-    if (!values.fullName) {
-      errors.fullName = "Missing Full Name";
+const DeviceCreate = () => {
+  const validateDeviceCreation = (values: DeviceCreateValues) => {
+    const errors: DeviceCreateValues = {};
+    if (!values.device_id) {
+      errors.device_id = "Missing Device ID";
     }
 
-    if (!values.email) {
-      errors.email = "Missing Email!";
+    if (!values.address) {
+      errors.address = "Missing Address";
     }
 
-    if (!values.password) {
-      errors.password = "Missing Password!";
+    if (!values.longitude) {
+      errors.longitude = "Missing longitude";
+    }
+
+    if (!values.latitude) {
+      errors.latitude = "Missing latitude";
     }
 
     return errors;
@@ -37,7 +42,7 @@ const UserCreate = () => {
   return (
     <Box width={"100%"}>
       <Create>
-        <SimpleForm validate={validateUserCreation}>
+        <SimpleForm validate={validateDeviceCreation}>
           <Box display="flex" flexDirection="column" width="100%">
             <Box
               flex={1}
@@ -46,8 +51,8 @@ const UserCreate = () => {
             >
               <TextInput
                 variant="outlined"
-                label="Full Name"
-                source="fullName"
+                label="Unique Device ID"
+                source="device_id"
                 isRequired
                 fullWidth
                 validate={required()}
@@ -56,8 +61,8 @@ const UserCreate = () => {
                 <Box mr="0.2em" flex={1}>
                   <TextInput
                     variant="outlined"
-                    label="Email"
-                    source="email"
+                    label="Address"
+                    source="address"
                     isRequired
                     fullWidth
                     validate={required()}
@@ -65,10 +70,20 @@ const UserCreate = () => {
                 </Box>
               </Box>
               <Box flex={1} display={"flex"} flexDirection="row">
-                <TextInput
+                <NumberInput
                   variant="outlined"
-                  label="Password"
-                  source="password"
+                  label="Latitude"
+                  source="latitude"
+                  isRequired
+                  fullWidth
+                  validate={required()}
+                />
+              </Box>
+              <Box flex={1} display={"flex"} flexDirection="row">
+                <NumberInput
+                  variant="outlined"
+                  label="Longitude"
+                  source="longitude"
                   isRequired
                   fullWidth
                   validate={required()}
@@ -82,4 +97,4 @@ const UserCreate = () => {
   );
 };
 
-export default UserCreate;
+export default DeviceCreate;
