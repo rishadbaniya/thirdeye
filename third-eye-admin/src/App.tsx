@@ -1,11 +1,12 @@
 import { useStore } from "react-admin";
 import { Admin, Resource } from "react-admin";
 import { dataProvider } from "./dataProvider";
-import { UserList } from "./users";
+import UserList from "./users/UsersList";
 import { Dashboard } from "./Dashboard";
 import { authProvider } from "./auth/authProvider";
 import Login from "./auth/Login";
 import themes from "./themes/themes";
+import UserCreate from "./users/UserCreate";
 
 export const App = () => {
   const [themeName] = useStore("themeName", "default");
@@ -21,7 +22,9 @@ export const App = () => {
       lightTheme={lightTheme}
       darkTheme={darkTheme}
     >
-      <Resource name="groups" list={UserList} />
+      <Resource name="users" list={UserList} create={UserCreate} />
     </Admin>
   );
-};
+}
+
+      //<Resource name="groups" list={UserList} />

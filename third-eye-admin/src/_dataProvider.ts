@@ -96,3 +96,4 @@ export const dataProvider: DataProvider = {
            })
         .then(({json}) => ({data: json}));
   }
+
