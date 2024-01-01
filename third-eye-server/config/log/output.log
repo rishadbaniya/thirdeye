@@ -2635,3 +2635,1777 @@
 2024-01-01T01:45:32.824109119+05:45 [actix_server::worker] INFO- shutting down idle worker
 2024-01-01T01:45:32.824254727+05:45 [actix_server::worker] INFO- shutting down idle worker
 2024-01-01T01:45:32.824450378+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:37:20.219320006+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:37:20.228327262+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:37:20.350808734+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:37:20.354388799+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:37:20.354757183+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T02:39:12.744339258+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:39:32.285861665+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T02:39:32.286023237+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T02:39:32.286128521+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286153920+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286209876+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286250849+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286310922+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286363825+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286528488+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286594834+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286652874+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286700712+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286773653+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286853119+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:39:32.286980352+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:39:56.712453438+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:39:56.748903437+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:39:57.072700386+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:39:57.088824251+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:39:57.090053512+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T02:39:57.744806198+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:12.155541459+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:13.455214171+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:14.049405783+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:14.395110886+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:23.289479044+05:45 [actix_web::types::json] DEBUG- Failed to deserialize Json from payload. Request path: /devices
+2024-01-01T02:40:44.998235207+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T02:40:44.998421483+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T02:40:44.998635329+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998672074+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998705720+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998735791+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998790121+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998850693+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998914453+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.998967720+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.999059159+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.999119949+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.999180211+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.999229054+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:40:44.999281238+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:41:03.309621301+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:41:03.320205045+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:41:03.464526174+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:41:03.471465742+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:41:03.471895731+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T02:43:58.495351957+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T02:43:58.495770149+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.496042090+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.496253211+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.496429534+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.496629741+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.496837219+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T02:43:58.497057729+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.497232902+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.497440921+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.497674659+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.497819223+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.497982480+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.498146570+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:43:58.498365633+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:44:18.725404510+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:44:18.734359247+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:44:18.868218978+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:44:18.872294218+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:44:18.872931172+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T02:48:25.256224738+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T02:48:25.256430842+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T02:48:25.256552501+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256607964+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256659438+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256781447+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256833648+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256893913+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256946582+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.256996432+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.257047876+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.257105680+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.257165310+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.257212512+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:48:25.257262389+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:48:49.161939938+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:48:49.166949847+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:48:49.259344460+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:48:49.260756777+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:48:49.260903736+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T02:49:23.952337452+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T02:49:23.952654024+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T02:49:23.952799994+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.952885654+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.952946517+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953029488+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953120368+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953213359+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953327249+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953403226+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953469093+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953536095+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953600616+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953679884+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T02:49:23.953747858+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T02:49:51.149533301+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T02:49:51.152192726+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T02:49:51.264643564+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T02:49:51.265438871+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T02:49:51.265520235+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T03:56:41.319319614+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T03:56:41.319997470+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320064876+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T03:56:41.320623027+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320712215+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320804693+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320852610+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320904105+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.320966693+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.321022966+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.321097410+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.321413994+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T03:56:41.321437803+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.324475436+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:56:41.327850599+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:57:19.750798602+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T03:57:19.755407371+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T03:57:19.856284826+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T03:57:19.859401518+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T03:57:19.859889369+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T03:57:27.956653901+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:32.956488687+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:37.956533478+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:42.956366661+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:47.957178338+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:52.957164620+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:57:57.956793235+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:02.957105644+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:07.956617871+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:12.956444024+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:17.957178864+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:22.956928750+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:27.957243400+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:32.956863084+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:37.956852996+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:42.956521880+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:47.956359262+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:52.957116237+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:58:57.956962670+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:02.956736048+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:07.957119753+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:12.956735446+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:17.956807405+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:22.957022995+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:27.956626133+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:32.956411034+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:37.956751166+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:42.956920534+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:47.956785653+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:52.956797939+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T03:59:53.072173923+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T03:59:53.072395392+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T03:59:53.072589616+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.072675127+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T03:59:53.072704469+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.072799539+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073093318+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073158612+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073304917+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073356168+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073416732+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073464124+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073664990+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073839595+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T03:59:53.073902354+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T04:00:16.181398239+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T04:00:16.184332971+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T04:00:16.282888923+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T04:00:16.283748825+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T04:00:16.283817798+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T04:00:19.108473654+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T04:00:19.121157060+05:45 [h2::server] DEBUG- connection error PROTOCOL_ERROR -- read_preface: invalid preface;
+2024-01-01T04:00:19.121342792+05:45 [hyper::server::server::new_svc] DEBUG- connection error: http2 error: connection error detected: unspecific protocol error detected
+2024-01-01T04:00:19.284474052+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T04:00:19.284624750+05:45 [h2::server] DEBUG- connection error PROTOCOL_ERROR -- read_preface: invalid preface;
+2024-01-01T04:00:19.284650110+05:45 [hyper::server::server::new_svc] DEBUG- connection error: http2 error: connection error detected: unspecific protocol error detected
+2024-01-01T04:00:58.985551097+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:03.985535396+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:08.985206375+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:13.985237821+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:18.985666443+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:23.984839715+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:28.984938436+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:33.985422535+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:38.985299544+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:43.985576821+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:48.985156734+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:53.984956857+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:01:58.984768530+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:03.984986666+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:08.985641634+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:13.985502175+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:18.985430957+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:23.985403630+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:28.985366625+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:33.985193076+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:38.985263263+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:43.984916564+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:48.984775833+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:53.985409991+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:02:58.985399849+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:03.984930439+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:08.985114051+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:13.985694200+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:18.984718235+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:23.985743696+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:28.985516797+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:33.985293223+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:38.074737364+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:03:38.074867592+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:03:38.079100657+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:43.079008814+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:48.078798572+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:53.079187551+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:03:58.078870965+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:03.079003691+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:08.079612906+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:13.078616298+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:18.078585583+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:23.078848783+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:28.079271749+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:33.079358793+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:38.079257234+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:43.079242952+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:48.078690353+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:53.078610676+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:04:58.078745980+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:03.078984720+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:08.078741795+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:13.078961873+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:18.078450565+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:23.079215944+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:28.078941922+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:33.078729413+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:38.079265818+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:43.078664953+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:48.079341497+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:50.616707921+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:05:50.616883922+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:05:50.620870852+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:55.621090228+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:58.897576138+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:05:58.897722002+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:05:58.900908915+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:05:59.921844333+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:05:59.921982436+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:05:59.925052014+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:04.925154826+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:06.419457268+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:06.419577902+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:06.422878950+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:09.741638123+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:09.741750939+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:09.744819489+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:12.306809995+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:12.306935705+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:12.313875904+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:13.598025995+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:17.310587109+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:18.598694538+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:22.310019482+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:23.598362868+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:25.711350042+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:25.711465481+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:25.716506255+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:26.671237901+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:26.671354134+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:26.674255061+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:26.930455695+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:26.930589652+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:26.934746977+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:27.907174502+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:06:27.907286631+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:27.910162069+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:31.934124359+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:32.909821869+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:36.934180297+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:37.909463324+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:39.454045476+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(Some(CloseReason { code: Away, description: None }))
+2024-01-01T04:06:39.454205977+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:06:40.434707273+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:42.909977675+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:45.434390753+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:47.909432727+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:50.435049396+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:52.910078064+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:55.434656733+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:06:57.909882688+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:00.434141217+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:02.910385494+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:05.434658393+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:07.910137357+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:10.434445017+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:12.909848318+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:15.434215532+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:17.910305603+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:20.434602376+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:22.910024539+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:25.434364546+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:27.909599163+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:30.434044364+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:32.910314533+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:35.434952624+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:37.909808678+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:40.434633785+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:42.909573925+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:45.434633779+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:47.910018359+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:50.434468157+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:52.909606044+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:55.434144077+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:07:57.910283951+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:00.434483935+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:02.909806784+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:05.434461581+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:07.909493703+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:10.434068176+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:12.909690160+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:14.735129642+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:14.735260040+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:14.740058585+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:14.743877060+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:14.744020929+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:14.752718088+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:16.733526150+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:16.733646935+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:16.738058250+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:16.751837933+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:16.752004268+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:16.756345426+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:18.679589665+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:18.679715145+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:18.683329553+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:18.789189479+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:18.789331345+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:18.794547913+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:23.683926393+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:23.792960939+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:26.499601823+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:26.499735892+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:26.501300144+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(None)
+2024-01-01T04:08:26.501452559+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:26.502911673+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:26.506602082+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:30.879280496+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Close(Some(CloseReason { code: Away, description: None }))
+2024-01-01T04:08:30.879442107+05:45 [third_eye_server::http::routes::poll_device_change] INFO- disconnected
+2024-01-01T04:08:31.503609990+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:32.099100805+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:34.600127605+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Text("\"asdlfjsafjsaj\"")
+2024-01-01T04:08:36.503286815+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:41.503208430+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:46.503254206+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:51.503726352+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:52.512199378+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:08:54.283755252+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Text("\"asdlfjsafjsaj\"")
+2024-01-01T04:08:56.503238405+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:01.503091599+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:06.502811028+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:11.503313820+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:16.503063377+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:21.503146167+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:26.503577655+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:31.503595179+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:36.503331023+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:41.503352080+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:46.503300333+05:45 [third_eye_server::http::routes::poll_device_change] DEBUG- msg: Pong(b"")
+2024-01-01T04:09:47.572690241+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T04:09:47.572854014+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T04:09:47.572946686+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.572976811+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573003997+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573115929+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573142145+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573173186+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573205155+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573230877+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573259952+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573418896+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573514088+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:09:47.573693427+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T04:09:47.573740716+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T04:11:01.714908737+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T04:11:01.717786998+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T04:11:01.820111197+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T04:11:01.821037602+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T04:11:01.821097273+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T04:28:55.734118445+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T04:28:55.734293490+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T04:28:55.734411973+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734468096+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734518115+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734561473+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734626940+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734676994+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734737556+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734797713+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734851929+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734899857+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.734975858+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.735056031+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T04:28:55.735124146+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T05:12:14.476159333+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:12:14.477596583+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:12:14.554543484+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:12:14.554791719+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:12:14.554836682+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:15:32.263010291+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T05:15:32.263397884+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T05:15:32.263652974+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.263911420+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T05:15:32.264198527+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.264405233+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.264594438+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.264785322+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265025274+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265219679+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265390101+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265550716+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265738960+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.265906628+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:15:32.266109247+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T05:16:00.218377216+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:16:00.218896845+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:16:00.301486925+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:16:00.301819014+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:16:00.301868758+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:22:57.752655128+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T05:22:57.753028714+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T05:22:57.753343986+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.753633746+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.753777138+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.754021766+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.754206436+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.754421269+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.754559150+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.754740265+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.755012055+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.755205523+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.755407596+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:22:57.755547923+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T05:22:57.755630147+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:23:11.263754999+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:23:11.264442575+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:23:11.346809284+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:23:11.347232902+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:23:11.347308336+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:24:02.208331800+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T05:24:02.208862644+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T05:24:02.209115963+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.209338239+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.209517520+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.209738240+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.209980218+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.210222776+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.210389381+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.210583481+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.210745016+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.210941397+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.211154199+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:02.211302931+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T05:24:02.211415424+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:24:14.526201437+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:24:14.527001692+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:24:14.606580343+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:24:14.606896487+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:24:14.606949986+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:26:23.815232774+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:26:23.815668646+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T05:26:23.815787020+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T05:26:23.816582772+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T05:26:23.816618513+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:26:23.816640215+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:26:23.816670966+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:26:23.816688486+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T05:26:24.062731689+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T05:26:24.062992782+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:26:29.073221639+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:26:34.080543071+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:26:39.087674611+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:26:41.725748672+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T05:26:41.726154055+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T05:26:41.726233562+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T05:28:33.979781813+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:28:33.980025848+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T05:28:33.980123458+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T05:28:33.980167879+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:28:33.980204570+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T05:28:33.980244722+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:28:33.980267363+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:28:33.980584116+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T05:28:33.980684686+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T05:28:34.154221954+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:28:39.168733830+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:28:54.971780886+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:28:54.972377773+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:28:55.047657622+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:28:55.047961208+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:28:55.048012990+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:28:59.670516557+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:28:59.670763029+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T05:28:59.670830973+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T05:28:59.670854634+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:28:59.670878141+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T05:28:59.670904906+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:28:59.670919671+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:28:59.671157914+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T05:28:59.671226216+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T05:28:59.903836362+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:04.923897773+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:09.941608962+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:14.954964251+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:19.966986968+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:24.981752197+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:29.995422035+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:35.008335831+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:40.018890215+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:45.031065734+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:50.037389487+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:55.051874854+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:29:58.292285537+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T05:29:58.292646069+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T05:29:58.292705696+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T05:31:59.382072636+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:31:59.382289217+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T05:31:59.382400416+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T05:31:59.382441727+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:31:59.382496663+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T05:31:59.382543106+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:31:59.382583503+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:31:59.382629471+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T05:31:59.574625237+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T05:31:59.574784629+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:04.583757066+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:09.604135447+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:14.620895440+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:19.640034455+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:24.652163582+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:29.667455662+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:32:33.362339885+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T05:32:33.362621556+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T05:32:33.362866702+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363057149+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363257798+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363452826+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363665918+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363832404+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.363994304+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.364132110+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T05:32:33.364322081+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.364489531+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.364644121+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.364807813+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T05:32:33.364973678+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T05:32:34.675969611+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T05:34:22.755190169+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T05:34:22.755728538+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T05:34:22.832086495+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T05:34:22.832381087+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T05:34:22.832427920+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T05:59:59.581764692+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:59:59.582879458+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T05:59:59.583007214+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T05:59:59.583057977+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:59:59.583113744+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T05:59:59.583164006+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T05:59:59.774539768+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T05:59:59.774705963+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T05:59:59.774987358+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T05:59:59.775062728+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:04.786601848+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:09.798333392+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:14.807429338+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:19.816479855+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:24.824986757+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:29.844364194+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:34.859218450+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:39.873479331+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:44.883810729+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:49.898923728+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:54.909448512+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:00:59.920005546+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:04.929657017+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:09.943492555+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:14.956601420+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:19.972652360+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:24.986068449+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:30.000858236+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:35.009158862+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:40.022909047+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:45.037160202+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:50.051681397+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:01:55.063404156+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:00.074740924+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:05.092057038+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:10.106701883+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:15.114994049+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:20.124019849+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:25.138246457+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:30.152379766+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:35.165139812+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:40.174901101+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:45.188587064+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:50.202804123+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:02:55.214190262+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:00.223781908+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:05.237402664+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:10.249355321+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:15.262442793+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:20.276503726+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:25.289076948+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:30.302703875+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:35.316298894+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:40.328379014+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:45.343334401+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:50.358071907+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:03:55.373159242+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:00.387263934+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:05.396729464+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:10.420332949+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:15.433854007+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:20.448539716+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:25.469782064+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:30.483000644+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:35.496612997+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:40.506260790+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:45.516302656+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:50.529539313+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:04:55.541218451+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:00.554413131+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:05.569370068+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:10.578498523+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:15.587051309+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:20.597282957+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:25.607757848+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:30.620747795+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:35.641190170+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:40.650831785+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:45.664432608+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:50.678371487+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:05:55.688028620+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:00.702962731+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:05.715144473+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:10.726106927+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:15.735831304+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:20.746189194+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:25.755080929+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:30.768651998+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:35.778111630+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:40.791876585+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:45.811591936+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:50.823764280+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:06:55.836346859+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:00.845261130+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:05.854237158+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:10.866910611+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:15.881363784+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:20.895482781+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:25.904287964+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:30.912798882+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:35.926380050+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:40.936670708+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:45.948818601+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:50.958193041+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:07:55.972509877+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:00.981885949+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:05.994236067+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:11.007728400+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:16.021400153+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:21.034527794+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:26.047186822+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:31.060204733+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:36.068839502+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:41.087570887+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:46.100251042+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:51.110654501+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:08:56.123183969+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:01.131557325+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:06.151600784+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:11.159452200+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:16.174704813+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:21.194924886+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:26.206389313+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:31.214698832+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:36.227732925+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:41.236136981+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:46.249832234+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:51.258639587+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:09:56.266682842+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:01.277143831+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:06.291625446+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:11.300803025+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:16.309314805+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:21.323732564+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:26.332640198+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:31.345691663+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:36.354135029+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:41.368047283+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:46.386566953+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:51.401131444+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:10:56.416060872+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:01.437510597+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:06.457312414+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:11.471596703+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:16.481782408+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:21.490415690+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:26.505303039+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:31.517477953+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:36.538451123+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:41.552558610+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:46.568071618+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:51.581718995+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:11:56.589902326+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:01.601109810+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:06.620798418+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:11.634282604+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:16.643155796+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:21.651609450+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:26.667583140+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:31.678621472+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:36.687409346+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:41.703762696+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:46.712139314+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:51.725513064+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:12:56.738864119+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:01.753110522+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:06.766887017+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:11.775888387+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:16.788953025+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:21.802886712+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:26.816119707+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:31.829934071+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:36.842700633+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:41.857389143+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:46.868676769+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:51.884250569+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:13:56.893056329+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:01.901956959+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:06.911497221+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:11.920058462+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:16.929751237+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:21.944997010+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:26.959284815+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:31.973493225+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:36.981840558+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:41.995130775+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:47.004357212+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:52.018297279+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:14:57.030959435+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:02.039590959+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:07.053520221+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:12.069200221+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:17.077991243+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:22.092750098+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:27.106573980+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:32.117377132+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:37.127214213+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:42.136232057+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:47.150545884+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:52.159441305+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:15:57.173606910+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:02.186827023+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:07.195745063+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:12.209295405+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:17.218623515+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:22.229464361+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:27.243451673+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:32.257328141+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:37.271547526+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:42.283428028+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:47.297766234+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:52.306061082+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:16:57.314652009+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:02.327711375+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:07.346475642+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:12.354850019+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:17.368198135+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:22.382448341+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:27.394126059+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:32.409532975+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:37.421127009+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:42.430090627+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:47.443709203+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:52.451517878+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:17:57.460139239+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:18:02.469357956+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:18:07.482922101+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:18:12.491983291+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:18:15.439354855+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T06:18:15.439737504+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T06:18:15.439990389+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.440165606+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.440371022+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.440543691+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.440688716+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T06:18:15.440867083+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441050294+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441199067+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441407786+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441564404+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441787345+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.441956396+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T06:18:15.442104131+05:45 [actix_server::accept] INFO- accept thread stopped
+2024-01-01T06:18:17.507419056+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:19:33.839470177+05:45 [third_eye_server] INFO- Loading the environment variables from .env
+2024-01-01T06:19:33.840042257+05:45 [third_eye_server] INFO- Current configs set to ThirdEyeServerConfig {
+    mongodb_config: Some(
+        MongoDBConfig {
+            url: "localhost:27017",
+            username: "kuosc",
+            password: "kuosc",
+            database: "kuosc",
+        },
+    ),
+    http_server_config: HttpServerConfig {
+        address: "0.0.0.0:8000",
+        undeletable: [
+            "rbdroid01@gmail.com",
+        ],
+        default_admin_fullName: "Rishad Baniya",
+        default_admin_email: "rbdroid01@gmail.com",
+        default_admin_password: "rishadbaniya",
+        access_token_expiry_time: 60,
+        refresh_token_expiry_time: 3600,
+        access_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+        refresh_token_key: Some(
+            "81509f5b421b660da6cd707e262e73cf335080641fe51a76e747b153621af0b4",
+        ),
+    },
+    grpc_server_config: gRPCServerConfig {
+        address: "0.0.0.0:8001",
+    },
+}
+2024-01-01T06:19:33.916998359+05:45 [third_eye_server] INFO- The default user already exists!. So, won't be creating it
+2024-01-01T06:19:33.917256408+05:45 [actix_server::builder] INFO- starting 12 workers
+2024-01-01T06:19:33.917313551+05:45 [actix_server::server] INFO- Tokio runtime found; starting in existing Tokio runtime
+2024-01-01T06:19:37.660756040+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:19:37.661139039+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T06:19:37.661266837+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T06:19:37.661300755+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:19:37.661341769+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T06:19:37.661379843+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:19:37.661402433+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:19:37.661672355+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T06:19:37.661784627+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T06:19:37.901098117+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:19:42.910422605+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:19:47.920768929+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:19:52.930870564+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:19:57.944799879+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:02.958844276+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:07.971452306+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:12.990118160+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:18.005168089+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:23.020020054+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:28.035530532+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:33.048141232+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:38.063204748+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:43.073466377+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:48.086307173+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:53.101290926+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:20:58.116357409+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:03.128581012+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:08.142235113+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:13.153654664+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:18.168380621+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:23.185443971+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:28.199661825+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:33.214197419+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:38.230239898+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:43.243166294+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:48.258544112+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:53.272049584+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:21:58.286983755+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:03.302768822+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:08.318038759+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:13.331631381+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:18.347391842+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:23.360533883+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:28.375266391+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:33.390671732+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:38.405027491+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:43.419635951+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:48.428716707+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:53.444063394+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:22:58.459007088+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:03.472670176+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:08.487557936+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:13.503326511+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:18.517384486+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:23.534960132+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:28.548534683+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:33.561382301+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:38.571965381+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:43.580466017+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:48.593184386+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:53.606012099+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:23:58.616737833+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:03.630720153+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:08.645267844+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:13.657780915+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:18.669834629+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:23.684159797+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:28.697245518+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:33.710071633+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:38.720425530+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:43.736615279+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:48.750918950+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:53.760311189+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:24:58.773396456+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:03.786702538+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:08.801825607+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:13.813153075+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:18.827379436+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:23.836897779+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:28.852767278+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:33.867262230+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:38.880954575+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:43.889754961+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:48.904370103+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:53.926146280+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:25:58.946086886+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:03.964605279+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:08.975862824+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:13.987908616+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:18.997272595+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:24.012172764+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:29.027867569+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:34.037555940+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:39.056373756+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:44.066701165+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:49.076780846+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:54.091627732+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:26:59.106875140+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:04.117198205+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:09.127075754+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:14.141608853+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:19.156303737+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:24.169278012+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:29.182663285+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:34.204296860+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:39.213474379+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:44.236116286+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:49.258298448+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:54.270154673+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:27:59.280322733+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:04.295735643+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:09.304565698+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:14.314054974+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:19.324519473+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:24.345984424+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:29.356149211+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:34.369265347+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:39.388735913+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:44.402308772+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:49.419535249+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:54.428394004+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:28:59.442820886+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:04.452938509+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:09.461717621+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:14.470936263+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:19.479571498+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:24.500778381+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:29.515097943+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:34.528104807+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:39.546013886+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:44.555803114+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:49.569080283+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:54.583731863+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:29:59.593089076+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:04.606879647+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:09.616092522+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:14.628669068+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:19.642433927+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:24.656853603+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:29.678621059+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:34.687494031+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:39.701779217+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:44.714727560+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:49.723473799+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:54.745214224+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:30:59.753608581+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:04.765484921+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:09.775174933+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:14.783942704+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:19.798886145+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:24.809525094+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:29.820403691+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:34.837073189+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:39.846999305+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:44.858051259+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:49.868299404+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:54.878034662+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:31:59.901339743+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:04.909452256+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:09.918969732+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:14.933000122+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:19.947486794+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:24.957095605+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:29.965788332+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:34.979995599+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:39.992524247+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:45.006882345+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:50.015189861+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:32:55.028209371+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:00.040481820+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:05.055134862+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:10.068972323+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:15.086317419+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:20.096655038+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:25.110838794+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:30.124865615+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:35.147077633+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:40.156019956+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:45.168035958+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:33:47.915739915+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T06:33:47.916024756+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T06:33:47.916066534+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T06:34:38.089523566+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:34:38.089755192+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T06:34:38.089848378+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T06:34:38.089875505+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:34:38.089906844+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T06:34:38.089949071+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:34:38.089967859+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:34:38.090222341+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T06:34:38.090302777+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T06:34:38.275365254+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:34:43.271285513+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T06:34:43.271495371+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T06:34:43.271531456+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T06:38:13.723093600+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:38:13.723311390+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T06:38:13.723388391+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T06:38:13.723417661+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:38:13.723446470+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T06:38:13.723471532+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:38:13.723486991+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:38:13.723509289+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T06:38:13.937471176+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T06:38:13.937627229+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:18.945824588+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:23.957559985+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:28.971403133+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:33.985012955+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:38.997846608+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:44.010759464+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:49.023169927+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:54.035361674+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:38:59.044656971+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:04.061403127+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:09.070773351+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:14.078695776+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:19.090316482+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:24.111497475+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:29.124109627+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:34.139127982+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:39.153079006+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:44.163659113+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:49.175335578+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:54.189213089+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:39:59.203313656+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:04.218107322+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:09.225903530+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:14.239806015+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:19.253178892+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:24.262871899+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:29.277570482+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:34.291347961+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:39.305657550+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:44.314288735+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:49.328484620+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:54.337661943+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:40:59.351716101+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:04.365926296+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:09.376873397+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:14.390207522+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:19.402900043+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:24.425522003+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:29.433831106+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:34.442450875+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:39.452909015+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:44.465723940+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:49.482561042+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:54.492369318+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:41:59.502521079+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:04.514539955+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:09.528228088+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:14.543341869+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:19.558438194+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:24.572072030+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:29.590422314+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:34.601167175+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:39.616410296+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:44.630871839+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:49.644407628+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:54.655035923+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:42:59.671015502+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:04.680795682+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:09.690455631+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:14.714107711+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:19.730551444+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:24.804539228+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:29.819505739+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:34.835760283+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:39.847833110+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:44.862477275+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:49.874981435+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:54.891890158+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:43:59.906236026+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:04.925642501+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:09.949680615+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:14.963725073+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:19.979367668+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:24.996539722+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:30.020595374+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:35.035186613+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:40.063503088+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:45.075355562+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:50.089562514+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:44:55.106181246+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:00.125004926+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:05.142600739+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:10.159454665+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:15.177707210+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:20.203590025+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:25.219610939+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:30.236877057+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:35.251203132+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:40.268663675+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:45.285866656+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:50.297453445+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:45:55.313898240+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:00.330661362+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:05.347139351+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:10.362485670+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:15.380140299+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:20.394313+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:25.409158238+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:30.421054059+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:35.437410760+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:40.457443932+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:45.470393628+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:50.487102162+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:46:55.505133693+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:00.521494437+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:05.535672497+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:10.547250531+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:15.571287266+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:20.583469521+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:25.594668032+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:30.610010071+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:35.622582741+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:40.633965441+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:45.645187745+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:50.658914267+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:47:55.675954393+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:00.689636180+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:05.702628855+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:10.716643021+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:15.728926788+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:20.743758883+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:25.760808885+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:30.784623577+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:35.800254706+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:40.817322581+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:45.833682862+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:50.849854501+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:48:55.867316629+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:00.885225836+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:05.902231392+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:10.918342665+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:15.934248152+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:20.953932761+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:25.972288666+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:30.990389403+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:36.007424691+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:41.020846027+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:46.038965850+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:51.052333387+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:49:56.070423026+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:01.083727112+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:06.095436696+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:11.109540210+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:16.125358993+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:21.141865041+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:26.152870181+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:31.164477750+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:36.175865060+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:41.189065462+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:46.206027359+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:51.226675748+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:50:56.244705258+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:01.268147634+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:06.281314115+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:11.296642735+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:16.308516873+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:21.322246410+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:26.335982661+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:31.349314458+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:36.362791215+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:41.377156309+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:46.396838626+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:51.414383013+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:51:56.428526056+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:01.442350420+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:06.454679671+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:11.471694364+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:16.488628401+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:21.503403580+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:26.521644528+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:31.540121414+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:36.553218862+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:41.572032027+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:46.586025324+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:51.602884787+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:52:56.617847411+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:01.635030571+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:06.648664475+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:11.662491364+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:16.679063257+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:21.694535716+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:26.710117914+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:31.729914115+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:36.746666254+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:41.765300162+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:46.780057291+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:51.793806697+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:53:56.812876907+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:01.830632934+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:06.848216458+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:11.867490919+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:16.883029610+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:21.902633372+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:26.924683004+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:31.943127299+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:36.956482691+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:41.975354440+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:46.990204188+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:52.010278545+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:54:57.022741927+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:02.033934149+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:07.052915562+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:12.069981289+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:17.089179095+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:22.107851795+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:27.124441530+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:32.137965783+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:37.153719609+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:42.171303244+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:47.190437086+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:52.204647127+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:55:57.224785641+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:02.241980016+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:07.260813310+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:12.274857464+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:17.292757279+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:22.311594182+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:27.331258670+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:32.351826316+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:37.369610080+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:42.397190662+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:47.420456657+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:52.438922829+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:56:57.456446699+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:02.477547714+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:07.493880826+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:12.512081179+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:17.529751271+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:22.546584150+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:27.558055821+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:32.572028183+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:37.594071063+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:42.609481106+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:47.629225819+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:52.651466429+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:57:57.665726474+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:02.691914603+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:07.709278628+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:12.721080007+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:17.740028187+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:22.755925462+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:27.770639370+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:32.787268842+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:37.803439928+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:42.819749338+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:47.834656615+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:52.852780634+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:58:57.869199901+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:02.886709104+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:07.903881163+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:12.922543874+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:14.018060454+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T06:59:14.018496922+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T06:59:14.018600278+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T06:59:21.754760820+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:59:21.755023011+05:45 [h2::proto::connection] DEBUG- Connection; peer=Server
+2024-01-01T06:59:21.755132859+05:45 [h2::codec::framed_write] DEBUG- send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 983041 }
+2024-01-01T06:59:21.756839903+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384 }
+2024-01-01T06:59:21.756896582+05:45 [h2::codec::framed_write] DEBUG- send frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:59:21.756920405+05:45 [h2::codec::framed_read] DEBUG- received frame=Settings { flags: (0x1: ACK) }
+2024-01-01T06:59:21.756935208+05:45 [h2::proto::settings] DEBUG- received settings ACK; applying Settings { flags: (0x0), initial_window_size: 1048576, max_frame_size: 16384, max_header_list_size: 16777216 }
+2024-01-01T06:59:21.756953114+05:45 [h2::codec::framed_read] DEBUG- received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+2024-01-01T06:59:21.757407751+05:45 [h2::codec::framed_read] DEBUG- received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+2024-01-01T06:59:22.045976279+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:27.062386057+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:32.084186654+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:37.099662083+05:45 [h2::codec::framed_read] DEBUG- received frame=Data { stream_id: StreamId(1) }
+2024-01-01T06:59:37.898611339+05:45 [tonic::codec::decode] DEBUG- decoder inner stream error: Status { code: Unknown, message: "h2 protocol error: error reading a body from connection: stream closed because of a broken pipe", source: Some(hyper::Error(Body, Error { kind: Io(Custom { kind: BrokenPipe, error: "stream closed because of a broken pipe" }) })) }
+2024-01-01T06:59:37.899195096+05:45 [hyper::proto::h2::server] DEBUG- send response error: user error: unexpected frame type
+2024-01-01T06:59:37.899301383+05:45 [hyper::proto::h2::server] DEBUG- stream error: http2 error: user error: unexpected frame type
+2024-01-01T07:00:29.200336386+05:45 [actix_server::server] INFO- SIGINT received; starting forced shutdown
+2024-01-01T07:00:29.200632253+05:45 [actix_server::accept] DEBUG- paused accepting connections on 0.0.0.0:8000
+2024-01-01T07:00:29.200904307+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.201095121+05:45 [actix_server::worker] INFO- force shutdown worker, closing 1 connections
+2024-01-01T07:00:29.201267733+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.201433754+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.201612876+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.201770943+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.201966481+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202112718+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202263083+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202397800+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202574034+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202726703+05:45 [actix_server::worker] INFO- shutting down idle worker
+2024-01-01T07:00:29.202889012+05:45 [actix_server::accept] INFO- accept thread stopped

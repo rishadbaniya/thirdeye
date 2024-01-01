@@ -1,6 +1,6 @@
 use super::middlewares::authorization::AuthReq;
 use super::routes::auth::{login, logout, refresh};
-use super::routes::device::create_device;
+use super::routes::device::{create_device, get_device, get_devices, delete_device};
 use super::routes::group::{create_group, get_group, get_groups};
 use super::routes::poll_device_change::run_ws_server;
 use super::routes::user::{create_user, delete_user, get_user, get_users, update_user};
@@ -40,7 +40,10 @@ pub async fn run_http_server(
             .service(get_group)
             .service(get_groups)
             .service(create_device)
-            .route("/fetch-change", actix_web::web::get().to(run_ws_server))
+            .service(get_device)
+            .service(get_devices)
+            .service(delete_device)
+            .route("/change", actix_web::web::get().to(run_ws_server))
         // TODO pass the http server config too as app data
     })
     .bind(http_server_addr)

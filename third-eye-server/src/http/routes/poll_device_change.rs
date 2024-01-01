@@ -16,11 +16,7 @@ const CLIENT_TIMEOUT: Duration = Duration::from_secs(10);
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct DeviceIdentifier {
-    /// The unique name of the device
-    pub deviceName: String,
-
-    /// The unique name of the group
-    pub groupName: String,
+    pub device_id: String,
 }
 
 pub async fn fetch_change(
@@ -44,15 +40,13 @@ pub async fn fetch_change(
 
                     Message::Text(bytes) => {
                         let ident = String::from(bytes);
-                        let device_identifier: DeviceIdentifier =
-                            serde_json::from_str(&ident).unwrap();
+                        let device_identifier: DeviceIdentifier = serde_json::from_str(&ident).unwrap();
                         last_heartbeat = Instant::now();
                         let db = &mongo_client.database;
                         let devices_collection = db.collection::<NewDevice>("devices");
                         let pipeline = vec![doc! {
                             "$match" : {
-                                "deviceName" : device_identifier.deviceName,
-                                "groupName" : device_identifier.groupName
+                                "device_id" : device_identifier.device_id,
                             }
                         }];
                         let mut change_stream = match devices_collection.watch(pipeline, None).await
@@ -117,6 +111,7 @@ pub async fn run_ws_server(
     stream: web::Payload,
     mongo_client: web::Data<MongoDBClient>,
 ) -> Result<HttpResponse, Error> {
+    println!("GOT A REQUESAT HERE AT WS SERVER");
     let (res, session, msg_stream) = actix_ws::handle(&req, stream)?;
     rt::spawn(fetch_change(session, msg_stream, mongo_client.clone()));
 

@@ -197,7 +197,7 @@ impl DataExchangeService for ThirdEyeGRPCService {
                 };
 
                 let update = doc! { "$addToSet": {
-                        "resources" : {
+                        "resource" : {
                         "cpu_cores" : sys_info.cpu_cores,
                         "cpu_frequency" : sys_info.cpu_frequency,
                         "cpu_brand" : sys_info.cpu_brand,
@@ -209,6 +209,9 @@ impl DataExchangeService for ThirdEyeGRPCService {
                         }
                     }
                 };
+
+            println!("{:#?}", update);
+
                 match devices_collection
                     .update_one(device_filter, update, None)
                     .await

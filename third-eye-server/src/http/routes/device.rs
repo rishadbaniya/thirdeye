@@ -1,12 +1,17 @@
+use std::str::FromStr;
+
 use crate::utils::PasswordHasherHandler;
 use crate::{db::MongoDBClient, DeploymentDeviceInformation};
+use actix_web::http::header::ContentType;
 use actix_web::{
     delete, dev, error, get, post, put, web, HttpRequest, HttpResponse, Responder, Result,
 };
 use futures::StreamExt;
 use mongodb::bson::{doc, Bson, Document};
 use mongodb::options::FindOptions;
+use mongodb::bson::oid::ObjectId;
 use serde::{Deserialize, Serialize};
+use crate::utils::_id_mongodb_serializer;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct NewDevice {
@@ -16,35 +21,102 @@ pub struct NewDevice {
     /// The local address of the deployment
     pub address: String,
 
+    /// The longitude of deployment
+    pub longitude : f32,
+
+    /// The latitude of deployment
+    pub latitude : f32,
+
     /// The information over time
-    #[serde(default = "default_information")]
-    information: Option<Vec<DeploymentDeviceInformation>>,
+    #[serde(default = "default_resource")]
+    resource: Option<Vec<Resource>>,
 }
 
-fn default_information() -> Option<Vec<DeploymentDeviceInformation>> {
+fn default_resource() -> Option<Vec<Resource>> {
     Some(Vec::new())
 }
 
-#[post("/device")]
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Device {
+    /// The unique id of the group
+    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
+    pub _id: ObjectId,
+
+    /// The unique ID of the device
+    pub device_id: String,
+
+    /// The local address of the deployment
+    pub address: String,
+
+    /// The longitude of deployment
+    pub longitude : f32,
+
+    /// The latitude of deployment
+    pub latitude : f32,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ADevice {
+    /// The unique id of the group
+    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
+    pub _id: ObjectId,
+
+    /// The unique ID of the device
+    pub device_id: String,
+
+    /// The local address of the deployment
+    pub address: String,
+
+    /// The longitude of deployment
+    pub longitude : f32,
+
+    /// The latitude of deployment
+    pub latitude : f32,
+
+    /// The information over time
+    pub resource: Vec<DeploymentDeviceInformation>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Resource{
+    /// The number of CPU cores
+    pub cpu_cores: u32,
+
+    /// The CPU frequency
+    pub cpu_frequency: u32,
+
+    /// The CPU brand
+    pub cpu_brand: String,
+
+    /// The total memory size
+    pub memory_size: u32,
+
+    /// The total memory available
+    pub memory_available: u32,
+
+    /// The total memory used
+    pub memory_used: u32,
+
+    /// The system uptime
+    pub uptime: u32,
+
+}
+
+#[post("/devices")]
 pub async fn create_device(
     mongodb_client: web::Data<MongoDBClient>,
     new_device: web::Json<NewDevice>,
 ) -> Result<impl Responder> {
     let mut new_device = new_device.0;
-
-    // If NewUser provides information then we should set it to default despite someone trying to set it's value
-    new_device.information = default_information();
-
     let db = &mongodb_client.database;
     let devices_collection = db.collection::<NewDevice>("devices");
 
-    let group_filter_option = doc! {
-        "deviceName" : &new_device.deviceName,
-        "groupName" : &new_device.groupName
+    let device_filter_option = doc! {
+        "device_id" : &new_device.device_id
     };
 
-    match devices_collection.find_one(group_filter_option, None).await {
-        Ok(Some(_)) => Err(error::ErrorConflict("Group already exists")),
+    match devices_collection.find_one(device_filter_option, None).await {
+        Ok(Some(_)) => Err(error::ErrorConflict("Device already exists")),
         Ok(None) => {
             match devices_collection
                 .insert_one(new_device, None)
@@ -66,300 +138,147 @@ pub async fn create_device(
     }
 }
 
-//#[derive(Serialize, Deserialize)]
-//pub struct NewUser {
-//    /// Full name of the user
-//    pub fullName: String,
-//
-//    /// The email of the user that's used for login
-//    pub email: String,
-//
-//    /// The argon2 hashed password
-//    pub password: String,
-//
-//    /// The url of the image of the user
-//    pub imageUrl: Option<String>,
-//}
-//
-//#[derive(Serialize, Deserialize)]
-//pub struct UpdatedUser {
-//    /// Full name of the user
-//    pub fullName: Option<String>,
-//
-//    /// The email of the user that's used for login
-//    pub email: Option<String>,
-//
-//    /// The argon2 hashed password
-//    pub password: Option<String>,
-//
-//    /// The url of the image of the user
-//    pub imageUrl: Option<String>,
-//}
-//
-//impl Into<mongodb::bson::Document> for UpdatedUser {
-//    fn into(self) -> mongodb::bson::Document {
-//        let mut doc = doc! {};
-//
-//        macro_rules! insert_if_some {
-//            ($field:ident) => {
-//                if let Some(ref field) = self.$field {
-//                    doc.insert(stringify!($field), field);
-//                }
-//            };
-//        }
-//
-//        insert_if_some!(fullName);
-//        insert_if_some!(email);
-//        insert_if_some!(password);
-//        insert_if_some!(imageUrl);
-//
-//        doc
-//    }
-//}
-//
-//#[derive(Serialize, Deserialize)]
-//pub struct User {
-//    /// The unique id of the group
-//    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
-//    pub _id: ObjectId,
-//
-//    /// Full name of the user
-//    pub fullName: String,
-//
-//    /// The email of the user that's used for login
-//    pub email: String,
-//
-//    /// The url of the image of the user
-//    pub imageUrl: Option<String>,
-//}
-//
-//#[derive(Serialize, Deserialize)]
-//pub struct AllUsers {
-//    /// Data of all users
-//    data: Vec<User>,
-//
-//    /// Total no of Users
-//    total: i32,
-//}
-//
-//use mongodb::bson::Bson;
-//
-//#[post("/users")]
-//pub async fn create_user(
-//    mongodb_client: web::Data<MongoDBClient>,
-//    new_user: web::Json<NewUser>,
-//) -> Result<impl Responder> {
-//    let mut new_user = new_user.0;
-//    let db = &mongodb_client.database;
-//    let users_collection = db.collection::<NewUser>("users");
-//
-//    let user_filter_option = doc! {
-//        "email" : &new_user.email
-//    };
-//
-//    match users_collection.find_one(user_filter_option, None).await {
-//        Ok(Some(_)) => Err(error::ErrorConflict("User already exists")),
-//        Ok(None) => {
-//            let hashed_password = PasswordHasherHandler::hash(new_user.password.as_bytes());
-//            new_user.password = hashed_password;
-//
-//            match users_collection
-//                .insert_one(new_user, None)
-//                .await
-//                .unwrap()
-//                .inserted_id
-//            {
-//                Bson::ObjectId(id) => Ok(HttpResponse::Ok().body(id.to_string())),
-//                _ => {
-//                    Ok(HttpResponse::InternalServerError()
-//                        .body("Failed to insert into the database"))
-//                }
-//            }
-//        }
-//        Err(err) => {
-//            log::error!("Database Error | ${err:?}");
-//            Err(error::ErrorInternalServerError("Internal Server Error"))
-//        }
-//    }
-//}
-//
-//#[derive(Debug, Deserialize)]
-//struct PaginationParams {
-//    perPage: Option<u32>,
-//    page: Option<u32>,
-//}
-//
-//#[get("/users")]
-//pub async fn get_users(
-//    mongodb_client: web::Data<MongoDBClient>,
-//    req: HttpRequest,
-//) -> Result<impl Responder> {
-//    println!("THE REQUEST GOT HERE");
-//    let db = &mongodb_client.database;
-//    let users_collection = db.collection::<User>("users");
-//
-//    let (page, per_page) = match web::Query::<PaginationParams>::from_query(req.query_string()) {
-//        Ok(pagination_params) => {
-//            let pagination_params = pagination_params.into_inner();
-//            let page = pagination_params.page.unwrap_or(1);
-//            let perPage = pagination_params.perPage.unwrap_or(10);
-//            (page, perPage)
-//        }
-//        Err(_) => {
-//            return Err(error::ErrorBadRequest("Invalid Query"));
-//        }
-//    };
-//    let skip = (page - 1) * per_page;
-//    let user_find_options = FindOptions::builder()
-//        .limit(per_page as i64)
-//        .skip(skip as u64)
-//        .build();
-//
-//    match users_collection.find(None, Some(user_find_options)).await {
-//        Ok(mut cursor) => {
-//            let mut users = Vec::new();
-//            while let Some(v) = cursor.next().await {
-//                users.push(v.map_err(|err| {
-//                    log::error!("Error while parsing to User type probably | {err:?}");
-//                    error::ErrorInternalServerError("Couldn't retrieve some users")
-//                })?);
-//            }
-//            let total = users_collection
-//                .count_documents(None, None)
-//                .await
-//                .map_err(|err| {
-//                    log::error!("Database Error while trying to count total no of users| ${err:?}");
-//                    error::ErrorInternalServerError("Coudln't count total no of users")
-//                })? as i32;
-//
-//            Ok(web::Json(AllUsers { data: users, total }))
-//        }
-//        Err(err) => {
-//            log::error!("Database Error | ${err:?}");
-//            Err(error::ErrorInternalServerError("Internal Server Error"))
-//        }
-//    }
-//}
-//
-//#[get("/users/{id}")]
-//pub async fn get_user(
-//    mongodb_client: web::Data<MongoDBClient>,
-//    path: web::Path<String>,
-//) -> impl Responder {
-//    let id = path.into_inner();
-//
-//    let db = &mongodb_client.database;
-//    let users_collection = db.collection::<User>("users");
-//
-//    let user_filter_option = doc! {
-//        "_id" : ObjectId::from_str(&id).unwrap()
-//    };
-//
-//    match users_collection.find_one(user_filter_option, None).await {
-//        Ok(Some(user)) => Ok(web::Json(user)),
-//        Ok(None) => Err(error::ErrorNotFound("User not found")),
-//        Err(err) => {
-//            log::error!("Database Error | ${err:?}");
-//            Err(error::ErrorInternalServerError("Internal Server Error"))
-//        }
-//    }
-//}
-//
-//#[delete("/users/{email}")]
-//pub async fn delete_user(
-//    mongodb_client: web::Data<MongoDBClient>,
-//    path: web::Path<String>,
-//) -> Result<impl Responder> {
-//    let email = path.into_inner();
-//
-//    let db = &mongodb_client.database;
-//    let users_collection = db.collection::<User>("users");
-//
-//    let user_filter_option = doc! {
-//        "email" : email
-//    };
-//
-//    let handle_db_error = |err| {
-//        log::error!("Database Error | ${err:?}");
-//        error::ErrorInternalServerError("Internal Server Error")
-//    };
-//
-//    let result = users_collection
-//        .delete_one(user_filter_option, None)
-//        .await
-//        .map_err(handle_db_error)?;
-//
-//    if result.deleted_count == 1 {
-//        Ok(HttpResponse::Ok().body("User deleted successfully"))
-//    } else {
-//        Err(error::ErrorNotFound("User not found"))
-//    }
-//}
-//
-//#[put("/users/{email}")]
-//pub async fn update_user(
-//    mongodb_client: web::Data<MongoDBClient>,
-//    path: web::Path<String>,
-//    updated_user: web::Json<UpdatedUser>,
-//) -> Result<impl Responder> {
-//    let email = path.into_inner();
-//    let mut updated_user = updated_user.into_inner();
-//
-//    let db = &mongodb_client.database;
-//    let users_collection = db.collection::<UpdatedUser>("users");
-//
-//    // Check if the updated email is different from the current email
-//    if let Some(ref updated_user_email) = updated_user.email {
-//        if email != *updated_user_email {
-//            let existing_user_filter_option = doc! {
-//                "email": updated_user_email
-//            };
-//
-//            let handle_db_error = |err| {
-//                log::error!("Database Error | ${err:?}");
-//                error::ErrorInternalServerError("Internal Server Error")
-//            };
-//
-//            // Check if another user already exists with the updated email
-//            if users_collection
-//                .find_one(existing_user_filter_option, None)
-//                .await
-//                .map_err(handle_db_error)?
-//                .is_some()
-//            {
-//                return Err(error::ErrorConflict(
-//                    "Another user already exists with the updated email",
-//                ));
-//            }
-//        }
-//    }
-//
-//    let user_filter_option = doc! {
-//        "email" : &email
-//    };
-//
-//    if let Some(ref updated_user_password) = updated_user.password {
-//        updated_user.password = Some(PasswordHasherHandler::hash(
-//            updated_user_password.as_bytes(),
-//        ));
-//    }
-//    let update_user: Document = updated_user.into();
-//    let update = doc! { "$set": update_user};
-//
-//    match users_collection
-//        .update_one(user_filter_option, update, None)
-//        .await
-//    {
-//        Ok(result) => {
-//            if result.modified_count == 1 {
-//                Ok(HttpResponse::Ok().body("User updated successfully"))
-//            } else {
-//                Err(error::ErrorNotFound("User not found"))
-//            }
-//        }
-//        Err(err) => {
-//            log::error!("Database Error | ${err:?}");
-//            Err(error::ErrorInternalServerError("Internal Server Error"))
-//        }
-//    }
-//}
+#[derive(Serialize, Deserialize)]
+pub struct AllDevice {
+    /// Data of all users
+    data: Vec<Device>,
+
+    /// Total no of Users
+    total: i32,
+}
+
+#[derive(Debug, Deserialize)]
+struct PaginationParams {
+    perPage: Option<u32>,
+    page: Option<u32>,
+}
+
+#[get("/devices")]
+pub async fn get_devices(
+    mongodb_client: web::Data<MongoDBClient>,
+    req: HttpRequest,
+) -> Result<impl Responder> {
+    println!("THE REQUEST GOT HERE");
+    let db = &mongodb_client.database;
+    let devices_collection = db.collection::<Device>("devices");
+
+    let (page, per_page) = match web::Query::<PaginationParams>::from_query(req.query_string()) {
+        Ok(pagination_params) => {
+            let pagination_params = pagination_params.into_inner();
+            let page = pagination_params.page.unwrap_or(1);
+            let perPage = pagination_params.perPage.unwrap_or(10);
+            (page, perPage)
+        }
+        Err(_) => {
+            return Err(error::ErrorBadRequest("Invalid Query"));
+        }
+    };
+    let skip = (page - 1) * per_page;
+    let device_find_options = FindOptions::builder()
+        .limit(per_page as i64)
+        .skip(skip as u64)
+        .build();
+
+    match devices_collection.find(None, Some(device_find_options)).await {
+        Ok(mut cursor) => {
+            let mut users = Vec::new();
+            while let Some(v) = cursor.next().await {
+                users.push(v.map_err(|err| {
+                    log::error!("Error while parsing to User type probably | {err:?}");
+                    error::ErrorInternalServerError("Couldn't retrieve some users")
+                })?);
+            }
+            let total = devices_collection
+                .count_documents(None, None)
+                .await
+                .map_err(|err| {
+                    log::error!("Database Error while trying to count total no of users| ${err:?}");
+                    error::ErrorInternalServerError("Coudln't count total no of users")
+                })? as i32;
+
+            Ok(web::Json(AllDevice { data: users, total }))
+        }
+        Err(err) => {
+            log::error!("Database Error | ${err:?}");
+            Err(error::ErrorInternalServerError("Internal Server Error"))
+        }
+    }
+}
+
+#[get("/devices/{id}")]
+pub async fn get_device(
+    mongodb_client: web::Data<MongoDBClient>,
+    path: web::Path<String>,
+) -> impl Responder {
+    let id = path.into_inner();
+
+    let db = &mongodb_client.database;
+    let devices_collection = db.collection::<ADevice>("devices");
+
+    let pipeline = vec![
+        doc! {
+            "$match": {
+                "_id": ObjectId::from_str(&id).unwrap(),
+            },
+        },
+        doc! {
+            "$project": {
+                "_id" :1,
+                "device_id" :1,
+                "address" :1,
+                "longitude" :1,
+                "latitude" :1,
+                "resource": { "$slice": ["$resource", -1] },
+            },
+        },
+    ];
+
+    let mut cursor =  devices_collection.aggregate(pipeline, None).await.unwrap();
+    let mut resource = vec![];
+    for i in cursor.next().await{
+        resource.push(i.unwrap());
+    }
+    if resource.len() == 0 {
+        return HttpResponse::NotFound().body("Device not found");
+    } else{
+        let mut resource = resource[0].clone();
+        let id = resource.get_object_id("_id").unwrap();
+        resource.remove("_id").unwrap();
+        resource.insert("id", id.to_string());
+        return HttpResponse::Ok().content_type(ContentType::json()).body(resource.to_string())
+    }
+
+}
+
+#[delete("/devices/{id}")]
+pub async fn delete_device(
+    mongodb_client: web::Data<MongoDBClient>,
+    path: web::Path<String>,
+) -> Result<impl Responder> {
+    let id = path.into_inner();
+
+    let db = &mongodb_client.database;
+    let devices_collection = db.collection::<Device>("devices");
+
+    let user_filter_option = doc! {
+        "_id" : ObjectId::from_str(&id).unwrap()
+    };
+
+    let handle_db_error = |err| {
+        log::error!("Database Error | ${err:?}");
+        error::ErrorInternalServerError("Internal Server Error")
+    };
+
+    let result = devices_collection
+        .delete_one(user_filter_option, None)
+        .await
+        .map_err(handle_db_error)?;
+
+    if result.deleted_count == 1 {
+        Ok(HttpResponse::Ok().body("User deleted successfully"))
+    } else {
+        Err(error::ErrorNotFound("User not found"))
+    }
+}
+
+// TODO: Support for Update
