@@ -15,6 +15,7 @@ import UserList from "./users/UsersList";
 import DeviceList from "./devices/DeviceList";
 import DeviceCreate from "./devices/DeviceCreate";
 import DeviceEdit from "./devices/DeviceEdit";
+import { BarChart, LineChart } from "./visualizations";
 
 export const App = () => {
   const [dataProvider, udpateDataProvider] = useState();
@@ -62,6 +63,38 @@ export const App = () => {
         />
         <CustomRoutes>
           <Route path="/map" element={<NepalMap />} />
+          <Route
+            path="/bar"
+            element={
+              <BarChart
+                chart_data={[
+                  { quarter: 1, earnings: 13000 },
+                  { quarter: 2, earnings: 16500 },
+                  { quarter: 3, earnings: 14250 },
+                  { quarter: 4, earnings: 19000 },
+                ]}
+                headers={["Header 1", "Header 2", "Header 3", "Header 4"]}
+                x_label={"quarter"}
+                y_label={"earnings"}
+              />
+            }
+          />
+          <Route
+            path="/line"
+            element={
+              <LineChart
+                chart_data={[
+                  { x: 1, y: 13000 },
+                  { x: 2, y: 16500 },
+                  { x: 3, y: 14250 },
+                  { x: 4, y: 19000 },
+                ]}
+                headers={["Header 1", "Header 2", "Header 3", "Header 4"]}
+                x_label={"quarter"}
+                y_label={"earnings"}
+              />
+            }
+          />
         </CustomRoutes>
       </Admin>
     </>
