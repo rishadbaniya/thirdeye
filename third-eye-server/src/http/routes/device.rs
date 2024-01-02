@@ -1,17 +1,17 @@
 use std::str::FromStr;
 
 use crate::utils::PasswordHasherHandler;
+use crate::utils::_id_mongodb_serializer;
 use crate::{db::MongoDBClient, DeploymentDeviceInformation};
 use actix_web::http::header::ContentType;
 use actix_web::{
     delete, dev, error, get, post, put, web, HttpRequest, HttpResponse, Responder, Result,
 };
 use futures::StreamExt;
+use mongodb::bson::oid::ObjectId;
 use mongodb::bson::{doc, Bson, Document};
 use mongodb::options::FindOptions;
-use mongodb::bson::oid::ObjectId;
 use serde::{Deserialize, Serialize};
-use crate::utils::_id_mongodb_serializer;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct NewDevice {
@@ -22,10 +22,10 @@ pub struct NewDevice {
     pub address: String,
 
     /// The longitude of deployment
-    pub longitude : f32,
+    pub longitude: f32,
 
     /// The latitude of deployment
-    pub latitude : f32,
+    pub latitude: f32,
 
     /// The information over time
     #[serde(default = "default_resource")]
@@ -39,7 +39,7 @@ fn default_resource() -> Option<Vec<Resource>> {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Device {
     /// The unique id of the group
-    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
+    #[serde(serialize_with = "_id_mongodb_serializer", rename(serialize = "id"))]
     pub _id: ObjectId,
 
     /// The unique ID of the device
@@ -49,16 +49,16 @@ pub struct Device {
     pub address: String,
 
     /// The longitude of deployment
-    pub longitude : f32,
+    pub longitude: f32,
 
     /// The latitude of deployment
-    pub latitude : f32,
+    pub latitude: f32,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ADevice {
     /// The unique id of the group
-    #[serde(serialize_with="_id_mongodb_serializer", rename(serialize = "id"))]
+    #[serde(serialize_with = "_id_mongodb_serializer", rename(serialize = "id"))]
     pub _id: ObjectId,
 
     /// The unique ID of the device
@@ -68,17 +68,17 @@ pub struct ADevice {
     pub address: String,
 
     /// The longitude of deployment
-    pub longitude : f32,
+    pub longitude: f32,
 
     /// The latitude of deployment
-    pub latitude : f32,
+    pub latitude: f32,
 
     /// The information over time
-    pub resource: Vec<DeploymentDeviceInformation>,
+    resource: Vec<DeploymentDeviceInformation>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Resource{
+pub struct Resource {
     /// The number of CPU cores
     pub cpu_cores: u32,
 
@@ -99,7 +99,6 @@ pub struct Resource{
 
     /// The system uptime
     pub uptime: u32,
-
 }
 
 #[post("/devices")]
@@ -115,7 +114,10 @@ pub async fn create_device(
         "device_id" : &new_device.device_id
     };
 
-    match devices_collection.find_one(device_filter_option, None).await {
+    match devices_collection
+        .find_one(device_filter_option, None)
+        .await
+    {
         Ok(Some(_)) => Err(error::ErrorConflict("Device already exists")),
         Ok(None) => {
             match devices_collection
@@ -179,7 +181,10 @@ pub async fn get_devices(
         .skip(skip as u64)
         .build();
 
-    match devices_collection.find(None, Some(device_find_options)).await {
+    match devices_collection
+        .find(None, Some(device_find_options))
+        .await
+    {
         Ok(mut cursor) => {
             let mut users = Vec::new();
             while let Some(v) = cursor.next().await {
@@ -233,21 +238,22 @@ pub async fn get_device(
         },
     ];
 
-    let mut cursor =  devices_collection.aggregate(pipeline, None).await.unwrap();
+    let mut cursor = devices_collection.aggregate(pipeline, None).await.unwrap();
     let mut resource = vec![];
-    for i in cursor.next().await{
+    for i in cursor.next().await {
         resource.push(i.unwrap());
     }
     if resource.len() == 0 {
         return HttpResponse::NotFound().body("Device not found");
-    } else{
+    } else {
         let mut resource = resource[0].clone();
         let id = resource.get_object_id("_id").unwrap();
         resource.remove("_id").unwrap();
         resource.insert("id", id.to_string());
-        return HttpResponse::Ok().content_type(ContentType::json()).body(resource.to_string())
+        return HttpResponse::Ok()
+            .content_type(ContentType::json())
+            .body(resource.to_string());
     }
-
 }
 
 #[delete("/devices/{id}")]
