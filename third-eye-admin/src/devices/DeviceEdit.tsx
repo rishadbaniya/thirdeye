@@ -29,7 +29,7 @@ const DeviceEdit = (props) => {
   );
 };
 
-const API_URl = "http://localhost:8000/devices";
+const API_URl = "http://20.228.82.13:8000/devices";
 const DeviceEditForm = () => {
   const id = useRecordContext().id;
   const [compResource, updateCompResource] = useState({});

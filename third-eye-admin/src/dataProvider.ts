@@ -1,39 +1,39 @@
-import { fetchUtils } from "react-admin";
-import { addRefreshAuthToDataProvider } from "react-admin";
-import restDataProvider from "ra-data-rest-client";
-import { refreshAuth } from "./auth/authProvider";
-import axios from "axios";
+import axios from 'axios';
+import restDataProvider from 'ra-data-rest-client';
+import {addRefreshAuthToDataProvider, fetchUtils} from 'react-admin';
 
-const RESTAPI_URL = "http://localhost:8000";
+import {refreshAuth} from './auth/authProvider';
+
+const RESTAPI_URL = 'http://20.228.82.13:8000';
 
 const dataProvider = (access_token: string) => {
   let httpClient = (url: any, options: any = {}) => {
     if (!options.headers) {
-      options.headers = new Headers({ Accept: "application/json" });
+      options.headers = new Headers({Accept: 'application/json'});
     }
-    options.headers.set("Authorization", `${access_token}`);
+    options.headers.set('Authorization', `${access_token}`);
     return fetchUtils.fetchJson(url, options);
   };
   return restDataProvider(RESTAPI_URL, httpClient);
 };
 
 const refreshRestDataProvider = (access_token: string) => {
-  //return addRefreshAuthToDataProvider(dataProvider(access_token), refreshAuth);
+  // return addRefreshAuthToDataProvider(dataProvider(access_token),
+  // refreshAuth);
   return dataProvider(access_token);
 };
 
-//export default refreshRestDataProvider;
+// export default refreshRestDataProvider;
 
 // Create an instance of Axios with custom configuration
-const axios_http_client = (access_token: string) =>
-  axios.create({
-    baseURL: RESTAPI_URL,
-    timeout: 5000,
-    headers: {
-      Authorization: `${access_token}`,
-      "Content-Type": "application/json",
-    },
-  });
+const axios_http_client = (access_token: string) => axios.create({
+  baseURL: RESTAPI_URL,
+  timeout: 5000,
+  headers: {
+    Authorization: `${access_token}`,
+    'Content-Type': 'application/json',
+  },
+});
 
 const db = (access_token: string) => {
   return {
@@ -43,13 +43,13 @@ const db = (access_token: string) => {
 
       let resp = new Promise((resolve, reject) => {
         axios_http_client(access_token)
-          .get(`/${resource}`)
-          .then((d) => {
-            resolve({ ...d.data });
-          })
-          .catch((err) => {
-            reject(err);
-          });
+            .get(`/${resource}`)
+            .then((d) => {
+              resolve({...d.data});
+            })
+            .catch((err) => {
+              reject(err);
+            });
       });
 
       return resp;
@@ -60,13 +60,13 @@ const db = (access_token: string) => {
 
       let resp = new Promise((resolve, reject) => {
         axios_http_client(access_token)
-          .get(`/${resource}/${params.id}`)
-          .then((d) => {
-            resolve({ data: { ...d.data } });
-          })
-          .catch((err) => {
-            reject(err);
-          });
+            .get(`/${resource}/${params.id}`)
+            .then((d) => {
+              resolve({data: {...d.data}});
+            })
+            .catch((err) => {
+              reject(err);
+            });
       });
 
       return resp;
@@ -82,13 +82,13 @@ const db = (access_token: string) => {
       let resp = new Promise((resolve, reject) => {
         console.log(params);
         axios_http_client(access_token)
-          .post(`/${resource}`, params.data)
-          .then((d) => {
-            resolve({ data: { ...params.data, id: d.data } });
-          })
-          .catch((err) => {
-            reject(err);
-          });
+            .post(`/${resource}`, params.data)
+            .then((d) => {
+              resolve({data: {...params.data, id: d.data}});
+            })
+            .catch((err) => {
+              reject(err);
+            });
       });
 
       return resp;
@@ -101,13 +101,13 @@ const db = (access_token: string) => {
       let resp = new Promise((resolve, reject) => {
         console.log(params);
         axios_http_client(access_token)
-          .put(`/${resource}/${params.previousData.email}`, params.data)
-          .then((d) => {
-            resolve({ data: { ...params.data, id: d.data } });
-          })
-          .catch((err) => {
-            reject(err);
-          });
+            .put(`/${resource}/${params.previousData.email}`, params.data)
+            .then((d) => {
+              resolve({data: {...params.data, id: d.data}});
+            })
+            .catch((err) => {
+              reject(err);
+            });
       });
 
       return resp;
@@ -116,25 +116,25 @@ const db = (access_token: string) => {
     updateMany: (resource, params) => Promise,
 
     delete: (resource, params) => {
-      console.log("IN DELETE");
+      console.log('IN DELETE');
       let resp = new Promise((resolve, reject) => {
-        console.log("THE DATA I GOT PRINTED RIGHT HERE IS ");
+        console.log('THE DATA I GOT PRINTED RIGHT HERE IS ');
         console.log(params);
         axios_http_client(access_token)
-          .delete(`/${resource}/${params.previousData.id}`)
-          .then((d) => {
-            resolve({ data: params.previousData });
-          })
-          .catch((err) => {
-            reject(err);
-          });
+            .delete(`/${resource}/${params.previousData.id}`)
+            .then((d) => {
+              resolve({data: params.previousData});
+            })
+            .catch((err) => {
+              reject(err);
+            });
       });
 
       return resp;
     },
     // delete a list of records based on an array of ids
     deleteMany: (resource: any, params: any) => {
-      console.log("MA DELETE KO HO");
+      console.log('MA DELETE KO HO');
       // about to write delete code for each id
       let ids = params.ids;
       let allDeletes = [];
@@ -142,25 +142,25 @@ const db = (access_token: string) => {
         let resp = new Promise((resolve, reject) => {
           console.log(params);
           axios_http_client(access_token)
-            .delete(`/${resource}/${id}`)
-            .then((d) => {
-              resolve(id);
-            })
-            .catch((err) => {
-              reject(err);
-            });
+              .delete(`/${resource}/${id}`)
+              .then((d) => {
+                resolve(id);
+              })
+              .catch((err) => {
+                reject(err);
+              });
         });
         allDeletes.push(resp);
       });
 
       return new Promise((res, rej) => {
         Promise.all(allDeletes)
-          .then((d) => {
-            res({ data: d });
-          })
-          .catch((err) => {
-            rej(err);
-          });
+            .then((d) => {
+              res({data: d});
+            })
+            .catch((err) => {
+              rej(err);
+            });
       });
     },
   };
