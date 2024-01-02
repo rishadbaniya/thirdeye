@@ -116,10 +116,12 @@ const db = (access_token: string) => {
     updateMany: (resource, params) => Promise,
 
     delete: (resource, params) => {
+      console.log("IN DELETE");
       let resp = new Promise((resolve, reject) => {
+        console.log("THE DATA I GOT PRINTED RIGHT HERE IS ");
         console.log(params);
         axios_http_client(access_token)
-          .delete(`/${resource}/${params.previousData.email}`)
+          .delete(`/${resource}/${params.previousData.id}`)
           .then((d) => {
             resolve({ data: params.previousData });
           })
@@ -131,7 +133,36 @@ const db = (access_token: string) => {
       return resp;
     },
     // delete a list of records based on an array of ids
-    deleteMany: (resource, params) => Promise,
+    deleteMany: (resource: any, params: any) => {
+      console.log("MA DELETE KO HO");
+      // about to write delete code for each id
+      let ids = params.ids;
+      let allDeletes = [];
+      ids.map((id: string) => {
+        let resp = new Promise((resolve, reject) => {
+          console.log(params);
+          axios_http_client(access_token)
+            .delete(`/${resource}/${id}`)
+            .then((d) => {
+              resolve(id);
+            })
+            .catch((err) => {
+              reject(err);
+            });
+        });
+        allDeletes.push(resp);
+      });
+
+      return new Promise((res, rej) => {
+        Promise.all(allDeletes)
+          .then((d) => {
+            res({ data: d });
+          })
+          .catch((err) => {
+            rej(err);
+          });
+      });
+    },
   };
 };
 

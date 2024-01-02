@@ -209,18 +209,18 @@ pub async fn get_user(
     }
 }
 
-#[delete("/users/{email}")]
+#[delete("/users/{id}")]
 pub async fn delete_user(
     mongodb_client: web::Data<MongoDBClient>,
     path: web::Path<String>,
 ) -> Result<impl Responder> {
-    let email = path.into_inner();
+    let id = path.into_inner();
 
     let db = &mongodb_client.database;
     let users_collection = db.collection::<User>("users");
 
     let user_filter_option = doc! {
-        "email" : email
+        "_id" : ObjectId::from_str(id.as_str()).map_err(|_| error::ErrorNotFound("Object ID parse error"))?
     };
 
     let handle_db_error = |err| {
